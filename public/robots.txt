@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://benbaxventures.com/sitemap.xml
