@@ -78,7 +78,7 @@ export default function EmployersPage() {
           </p>
           <Link
             href="/contact"
-            className="btn-base rounded-lg bg-accent-orange px-6 py-3 text-white hover:bg-orange-600 focus:ring-accent-orange"
+            className="btn-base rounded-lg bg-accent-orange px-6 py-3 text-slate-900 hover:bg-amber-500 hover:text-slate-900 focus:ring-accent-orange"
           >
             Schedule a Consultation
           </Link>

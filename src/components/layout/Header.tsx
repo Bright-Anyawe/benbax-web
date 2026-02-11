@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu } from 'lucide-react';
+import { ArrowRight, Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { NAV_LINKS } from '@/lib/constants';
 import Logo from '../common/Logo';
@@ -14,31 +14,43 @@ const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === '/';
+  const isTopState = isHomePage && !isScrolled;
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : 'unset';
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [isMobileMenuOpen]);
 
-  const headerBackground = isHomePage && !isScrolled ? 'bg-transparent' : 'bg-white shadow-sm';
-  const textColor = isHomePage && !isScrolled ? 'text-white' : 'text-slate-700';
-  const logoColor = isHomePage && !isScrolled ? 'text-white' : 'text-primary';
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   return (
     <>
-      <header className={cn('fixed inset-x-0 top-0 z-30 transition-all duration-300', headerBackground)}>
+      <header
+        className={cn(
+          'fixed inset-x-0 top-0 z-40 border-b transition-all duration-300',
+          isTopState
+            ? 'border-white/75 bg-white/90 backdrop-blur-xl shadow-[0_10px_36px_-24px_rgba(46,188,59,0.75)]'
+            : 'border-slate-200 bg-white/95 backdrop-blur-xl shadow-[0_10px_30px_-20px_rgba(15,23,42,0.45)]'
+        )}
+      >
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <Logo textColor={logoColor} />
+          <Logo className="transition-transform duration-300 hover:scale-[1.01]" />
 
-          <nav className="hidden items-center space-x-8 lg:flex">
+          <nav className="hidden items-center space-x-6 lg:flex">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -46,11 +58,18 @@ const Header: React.FC = () => {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    'text-sm font-medium transition-colors hover:text-primary',
-                    isActive ? 'text-primary' : textColor,
+                    'group relative text-sm font-semibold tracking-wide text-slate-700 transition-colors duration-300 hover:text-primary',
+                    isActive && 'text-primary',
                   )}
                 >
                   {link.label}
+                  <span
+                    className={cn(
+                      'absolute -bottom-2 left-0 h-0.5 rounded-full bg-primary transition-all duration-300',
+                      isActive ? 'w-full' : 'w-0 group-hover:w-full',
+                    )}
+                    aria-hidden="true"
+                  />
                 </Link>
               );
             })}
@@ -58,16 +77,17 @@ const Header: React.FC = () => {
 
           <Link
             href="/contact"
-            className="btn-base hidden rounded-lg bg-accent-orange px-6 py-3 text-base text-white hover:bg-orange-600 focus:ring-accent-orange lg:inline-flex"
+            className="btn-base hidden rounded-xl bg-accent-orange px-6 py-3 text-base text-slate-900 shadow-lg shadow-amber-500/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-amber-500 hover:text-slate-900 focus:ring-accent-orange lg:inline-flex"
           >
             Get Started
+            <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
 
           <button
             onClick={() => setIsMobileMenuOpen(true)}
             className={cn(
               'rounded-lg p-2 transition-colors lg:hidden',
-              isHomePage && !isScrolled ? 'text-white hover:bg-white/10' : 'text-slate-700 hover:bg-slate-100',
+              'text-slate-700 hover:bg-slate-100',
             )}
             aria-label="Open menu"
           >

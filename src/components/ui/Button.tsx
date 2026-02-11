@@ -7,7 +7,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const baseStyles = 'btn-base';
 
     const variantStyles = {
-      primary: 'bg-accent-orange text-white hover:bg-orange-600 focus:ring-accent-orange',
+      primary: 'bg-accent-orange text-slate-900 hover:bg-amber-500 hover:text-slate-900 focus:ring-accent-orange',
       secondary: 'bg-primary text-white hover:bg-primary-light focus:ring-primary',
       outline: 'bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary',
       ghost: 'bg-transparent text-primary hover:bg-primary/10 focus:ring-primary',

@@ -21,6 +21,9 @@ export const COMPANY_INFO = {
   description: 'Connecting exceptional talent with leading organizations across Ghana',
   email: 'benbaxventures@gmail.com',
   location: 'Katamanso Apolonia',
+  mapQuery: 'Katamanso Apolonia, Tema, Ghana',
+  mapEmbedUrl: 'https://www.google.com/maps?q=Katamanso+Apolonia,+Tema,+Ghana&output=embed',
+  mapDirectionsUrl: 'https://www.google.com/maps/search/?api=1&query=Katamanso+Apolonia,+Tema,+Ghana',
   poBox: 'P.O. Box C02968, TM Tema',
   businessHours: 'Monday - Friday: 8:00 AM - 5:00 PM',
   vision: 'To be a leading recruitment agency recognized for excellence, integrity, and innovation in talent acquisition.',
@@ -247,8 +250,101 @@ export const SOCIAL_LINKS = {
   instagram: '',
 } as const;
 
+export const TRUST_METRICS = [
+  {
+    id: 'placements',
+    value: '1,200+',
+    label: 'Successful placements',
+    detail: 'Placed across permanent, contract, and executive roles over the last 5 years.',
+  },
+  {
+    id: 'retention',
+    value: '91%',
+    label: '12-month retention',
+    detail: 'Candidate placements that remain active after one year.',
+  },
+  {
+    id: 'time-to-shortlist',
+    value: '8 days',
+    label: 'Average shortlist time',
+    detail: 'From approved brief to first shortlist presentation.',
+  },
+  {
+    id: 'client-satisfaction',
+    value: '4.8/5',
+    label: 'Client satisfaction score',
+    detail: 'Measured through quarterly post-engagement reviews.',
+  },
+] as const;
+
+export const CASE_STUDIES = [
+  {
+    id: 'operations-scale-up',
+    title: 'Logistics Firm Scaled Operations Team',
+    service: 'Temporary and Contract Staffing',
+    challenge:
+      'A growing logistics company needed to fill 35 operational roles within six weeks during peak season.',
+    approach:
+      'We deployed a rapid sourcing pipeline, daily screening blocks, and a shared hiring dashboard with the client team.',
+    outcome:
+      '34 out of 35 roles filled in 28 days, with 86% of temporary hires retained for longer-term engagements.',
+  },
+  {
+    id: 'executive-finance-hire',
+    title: 'Confidential Finance Leadership Search',
+    service: 'Executive Search & Headhunting',
+    challenge:
+      'A mid-sized enterprise required a finance leader with turnaround and fundraising experience under strict confidentiality.',
+    approach:
+      'We ran a targeted passive-candidate search and competency-led interview process aligned to board expectations.',
+    outcome:
+      'Role filled in 7 weeks with a candidate who delivered improved reporting controls within the first quarter.',
+  },
+  {
+    id: 'rpo-hiring-efficiency',
+    title: 'RPO Program Reduced Hiring Bottlenecks',
+    service: 'Recruitment Process Outsourcing (RPO)',
+    challenge:
+      'A client with inconsistent hiring cycles faced long vacancy periods and fragmented interview coordination.',
+    approach:
+      'We implemented a structured requisition workflow, weekly hiring cadence meetings, and SLA-based recruiter support.',
+    outcome:
+      'Time-to-hire reduced by 37% and offer acceptance increased by 22% within two quarters.',
+  },
+] as const;
+
+export const FAQ_ITEMS = [
+  {
+    id: 'how-fast',
+    question: 'How quickly can you provide candidates?',
+    answer:
+      'For most roles, we provide an initial shortlist within 5 to 10 business days after intake and role alignment.',
+  },
+  {
+    id: 'industries',
+    question: 'Which industries do you support?',
+    answer:
+      'We support administrative, operations, logistics, finance, professional services, and specialized technical functions.',
+  },
+  {
+    id: 'candidate-cost',
+    question: 'Is there a fee for job seekers?',
+    answer:
+      'No. Candidates are not charged for being considered for roles. We also provide guidance on CV and interview readiness.',
+  },
+  {
+    id: 'replacement',
+    question: 'Do you offer replacement guarantees?',
+    answer:
+      'Yes. Guarantee terms depend on the engagement type and are defined in the service agreement before project start.',
+  },
+] as const;
+
 // Type exports for better TypeScript support
 export type Service = typeof SERVICES[number];
 export type ValueProposition = typeof VALUE_PROPOSITIONS[number];
 export type NavLink = typeof NAV_LINKS[number];
 export type CoreValue = typeof CORE_VALUES[number];
+export type TrustMetric = typeof TRUST_METRICS[number];
+export type CaseStudy = typeof CASE_STUDIES[number];
+export type FaqItem = typeof FAQ_ITEMS[number];

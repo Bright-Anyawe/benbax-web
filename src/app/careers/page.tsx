@@ -47,7 +47,7 @@ export default function CareersPage() {
             </p>
             <a
               href={formatMailto(COMPANY_INFO.email, 'CV Submission - BENBAX VENTURES')}
-              className="btn-base rounded-lg bg-accent-orange px-6 py-3 text-white hover:bg-orange-600 focus:ring-accent-orange"
+              className="btn-base rounded-lg bg-accent-orange px-6 py-3 text-slate-900 hover:bg-amber-500 hover:text-slate-900 focus:ring-accent-orange"
             >
               Email Your CV
             </a>

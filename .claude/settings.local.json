@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(test:*)",
-      "Bash([ -f \"package.json\" ])",
-      "Bash([ -f \".gitignore\" ])"
-    ]
-  }
-}
