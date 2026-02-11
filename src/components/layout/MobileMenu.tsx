@@ -20,12 +20,12 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   return (
     <>
       <div
-        className="fixed inset-0 z-40 bg-slate-950/45 backdrop-blur-[2px] animate-fade-in lg:hidden"
+        className="fixed inset-0 z-40 bg-slate-950/45 backdrop-blur-[2px] animate-fade-in xl:hidden"
         onClick={onClose}
         aria-hidden="true"
       />
 
-      <div className="fixed inset-y-0 right-0 z-50 w-full max-w-sm overflow-hidden bg-white shadow-2xl animate-slide-in-right lg:hidden">
+      <div className="fixed inset-y-0 right-0 z-50 w-full max-w-sm overflow-hidden bg-white shadow-2xl animate-slide-in-right xl:hidden">
         <div className="flex h-full flex-col">
           <div className="flex items-center justify-between border-b border-slate-200 bg-slate-50 p-6">
             <h2 className="text-xl font-bold text-primary">Menu</h2>

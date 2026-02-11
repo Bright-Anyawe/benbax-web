@@ -50,7 +50,7 @@ const Header: React.FC = () => {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Logo className="transition-transform duration-300 hover:scale-[1.01]" />
 
-          <nav className="hidden items-center space-x-6 lg:flex">
+          <nav className="hidden items-center space-x-6 xl:flex">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -77,7 +77,7 @@ const Header: React.FC = () => {
 
           <Link
             href="/contact"
-            className="btn-base hidden rounded-xl bg-accent-orange px-6 py-3 text-base text-slate-900 shadow-lg shadow-amber-500/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-amber-500 hover:text-slate-900 focus:ring-accent-orange lg:inline-flex"
+            className="btn-base hidden rounded-xl bg-accent-orange px-6 py-3 text-base text-slate-900 shadow-lg shadow-amber-500/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-amber-500 hover:text-slate-900 focus:ring-accent-orange xl:inline-flex"
           >
             Get Started
             <ArrowRight className="ml-2 h-4 w-4" />
@@ -86,7 +86,7 @@ const Header: React.FC = () => {
           <button
             onClick={() => setIsMobileMenuOpen(true)}
             className={cn(
-              'rounded-lg p-2 transition-colors lg:hidden',
+              'rounded-lg p-2 transition-colors xl:hidden',
               'text-slate-700 hover:bg-slate-100',
             )}
             aria-label="Open menu"

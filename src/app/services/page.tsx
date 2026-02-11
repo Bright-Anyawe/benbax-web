@@ -7,7 +7,7 @@ import { SERVICES } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Explore BENBAX VENTURES recruitment services including permanent staffing, contract staffing, executive search, RPO, and career advisory.',
+    'Explore BENBAX LIMITED COMPANY recruitment services including permanent staffing, contract staffing, executive search, RPO, and career advisory.',
   keywords: ['staffing solutions Ghana', 'executive search Ghana', 'RPO services', 'career advisory'],
 };
 
@@ -49,3 +49,4 @@ export default function ServicesPage() {
     </Section>
   );
 }
+

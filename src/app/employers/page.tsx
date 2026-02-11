@@ -8,7 +8,7 @@ import { RECRUITMENT_PROCESS_EMPLOYER } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Employers',
   description:
-    'Partner with BENBAX VENTURES for efficient recruitment support, quality talent matching, and long-term staffing solutions in Ghana.',
+    'Partner with BENBAX LIMITED COMPANY for efficient recruitment support, quality talent matching, and long-term staffing solutions in Ghana.',
   keywords: ['hiring in Ghana', 'employer recruitment support', 'staffing partner', 'talent acquisition'],
 };
 
@@ -87,3 +87,4 @@ export default function EmployersPage() {
     </>
   );
 }
+

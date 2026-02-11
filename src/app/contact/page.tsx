@@ -9,7 +9,7 @@ import { formatMailto } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'Contact Us',
   description:
-    'Contact BENBAX VENTURES LIMITED COMPANY for recruitment support, staffing consultations, and job seeker assistance in Ghana.',
+    'Contact BENBAX LIMITED COMPANY for recruitment support, staffing consultations, and job seeker assistance in Ghana.',
   keywords: ['contact BENBAX', 'recruitment consultation Ghana', 'staffing inquiry', 'job support contact'],
 };
 
@@ -104,7 +104,7 @@ export default function ContactPage() {
 
         <div className="animate-fade-up overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm [animation-delay:220ms]">
           <iframe
-            title="BENBAX Ventures office location on Google Maps"
+            title="BENBAX office location on Google Maps"
             src={COMPANY_INFO.mapEmbedUrl}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -115,3 +115,4 @@ export default function ContactPage() {
     </Section>
   );
 }
+

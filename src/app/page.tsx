@@ -13,7 +13,7 @@ import { COMPANY_INFO } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Home',
   description:
-    'BENBAX VENTURES LIMITED COMPANY helps employers hire top talent and supports job seekers with recruitment and career services in Ghana.',
+    'BENBAX LIMITED COMPANY helps employers hire top talent and supports job seekers with recruitment and career services in Ghana.',
   keywords: ['recruitment agency Ghana', 'talent acquisition', 'staffing company', 'job seekers'],
 };
 
@@ -102,7 +102,7 @@ export default function HomePage() {
 
           <div className="animate-fade-up overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm [animation-delay:100ms]">
             <iframe
-              title="BENBAX Ventures location map"
+              title="BENBAX location map"
               src={COMPANY_INFO.mapEmbedUrl}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -114,3 +114,4 @@ export default function HomePage() {
     </>
   );
 }
+

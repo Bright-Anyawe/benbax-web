@@ -7,7 +7,7 @@ import { VALUE_PROPOSITIONS } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Why Choose Us',
   description:
-    'Discover why employers and job seekers choose BENBAX VENTURES for ethical, efficient, and high-quality recruitment support in Ghana.',
+    'Discover why employers and job seekers choose BENBAX LIMITED COMPANY for ethical, efficient, and high-quality recruitment support in Ghana.',
   keywords: ['why choose BENBAX', 'recruitment expertise Ghana', 'staffing partner'],
 };
 
@@ -15,7 +15,7 @@ export default function WhyChooseUsPage() {
   return (
     <Section background="gray">
       <PageHeader
-        title="Why Choose BENBAX VENTURES"
+        title="Why Choose BENBAX LIMITED COMPANY"
         description="We combine market expertise with a personalized and transparent recruitment process that prioritizes long-term outcomes."
       />
 
@@ -36,3 +36,4 @@ export default function WhyChooseUsPage() {
     </Section>
   );
 }
+

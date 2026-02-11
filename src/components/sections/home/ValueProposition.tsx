@@ -7,7 +7,7 @@ const ValueProposition = () => {
   return (
     <Section background="gray">
       <div className="mb-12 text-center">
-        <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">Why BENBAX VENTURES</h2>
+        <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">Why BENBAX LIMITED COMPANY</h2>
         <p className="mx-auto max-w-3xl text-lg text-slate-600">
           Our approach combines local expertise, transparency, and long-term partnership to deliver better hiring outcomes.
         </p>
@@ -41,3 +41,4 @@ const ValueProposition = () => {
 };
 
 export default ValueProposition;
+

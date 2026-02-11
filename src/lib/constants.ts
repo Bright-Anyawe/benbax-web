@@ -15,11 +15,11 @@ import {
 } from 'lucide-react';
 
 export const COMPANY_INFO = {
-  name: 'BENBAX VENTURES LIMITED COMPANY',
-  shortName: 'BENBAX VENTURES',
+  name: 'BENBAX LIMITED COMPANY',
+  shortName: 'BENBAX',
   tagline: 'Your Partner in Strategic Talent Acquisition',
   description: 'Connecting exceptional talent with leading organizations across Ghana',
-  email: 'benbaxventures@gmail.com',
+  email: 'benbaxlimitedcompany@gmail.com',
   location: 'Katamanso Apolonia',
   mapQuery: 'Katamanso Apolonia, Tema, Ghana',
   mapEmbedUrl: 'https://www.google.com/maps?q=Katamanso+Apolonia,+Tema,+Ghana&output=embed',

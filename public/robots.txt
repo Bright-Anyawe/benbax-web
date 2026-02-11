@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://benbaxventures.com/sitemap.xml
+Sitemap: https://benbaxlimitedcompany.com/sitemap.xml

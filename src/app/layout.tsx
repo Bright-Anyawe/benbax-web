@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     template: `%s | ${COMPANY_INFO.shortName}`,
   },
   description:
-    'BENBAX VENTURES LIMITED COMPANY provides professional recruitment and HR services in Ghana for employers and job seekers.',
+    'BENBAX LIMITED COMPANY provides professional recruitment and HR services in Ghana for employers and job seekers.',
   keywords: [
     'recruitment Ghana',
     'HR services Ghana',
     'staffing solutions',
     'executive search',
     'job seekers Ghana',
-    'BENBAX VENTURES',
+    'BENBAX LIMITED COMPANY',
   ],
   alternates: {
     canonical: '/',
@@ -41,7 +41,7 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: COMPANY_INFO.name,
-  url: 'https://benbaxventures.com',
+  url: 'https://benbaxlimitedcompany.com',
   email: COMPANY_INFO.email,
   address: {
     '@type': 'PostalAddress',
@@ -71,3 +71,4 @@ export default function RootLayout({
     </html>
   );
 }
+
