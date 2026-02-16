@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { ArrowUpRight, Clock4, Inbox, Mail, MapPin } from 'lucide-react';
+import { ArrowUpRight, Clock4, Inbox, Mail, MapPin, Phone } from 'lucide-react';
 import PageHeader from '@/components/common/PageHeader';
 import Section from '@/components/ui/Section';
 import ContactForm from '@/components/sections/contact/ContactForm';
 import { COMPANY_INFO } from '@/lib/constants';
-import { formatMailto } from '@/lib/utils';
+import { formatMailto, formatTel } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
@@ -18,6 +18,7 @@ const localBusinessSchema = {
   '@type': 'LocalBusiness',
   name: COMPANY_INFO.name,
   email: COMPANY_INFO.email,
+  telephone: COMPANY_INFO.restaurantPhone,
   description: COMPANY_INFO.description,
   address: {
     '@type': 'PostalAddress',
@@ -65,6 +66,12 @@ export default function ContactPage() {
                 <Mail className="mt-0.5 h-5 w-5 text-primary" />
                 <a href={formatMailto(COMPANY_INFO.email)} className="hover:text-primary">
                   {COMPANY_INFO.email}
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Phone className="mt-0.5 h-5 w-5 text-primary" />
+                <a href={formatTel(COMPANY_INFO.restaurantPhone)} className="hover:text-primary">
+                  Restaurant Contact: {COMPANY_INFO.restaurantPhone}
                 </a>
               </li>
             </ul>

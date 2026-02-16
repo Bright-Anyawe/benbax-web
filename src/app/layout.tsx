@@ -13,24 +13,22 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: `${COMPANY_INFO.shortName} | Recruitment and HR Services in Ghana`,
+    default: `${COMPANY_INFO.shortName} | Software Development, Recruitment & HR, Restaurant Services`,
     template: `%s | ${COMPANY_INFO.shortName}`,
   },
-  description:
-    'BENBAX LIMITED COMPANY provides professional recruitment and HR services in Ghana for employers and job seekers.',
+  description: COMPANY_INFO.description,
   keywords: [
-    'recruitment Ghana',
-    'HR services Ghana',
-    'staffing solutions',
-    'executive search',
-    'job seekers Ghana',
+    'software development Ghana',
+    'recruitment and HR services Ghana',
+    'restaurant services Ghana',
+    'digital solutions',
     'BENBAX LIMITED COMPANY',
   ],
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: `${COMPANY_INFO.shortName} | Recruitment and HR Services in Ghana`,
+    title: `${COMPANY_INFO.shortName} | Software Development, Recruitment & HR, Restaurant Services`,
     description: COMPANY_INFO.description,
     type: 'website',
     locale: 'en_GH',
@@ -43,6 +41,7 @@ const organizationSchema = {
   name: COMPANY_INFO.name,
   url: 'https://benbaxlimitedcompany.com',
   email: COMPANY_INFO.email,
+  telephone: COMPANY_INFO.restaurantPhone,
   address: {
     '@type': 'PostalAddress',
     addressLocality: COMPANY_INFO.location,

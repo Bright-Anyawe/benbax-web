@@ -1,9 +1,7 @@
 import {
   Users,
-  Clock,
-  Briefcase,
-  Settings,
-  GraduationCap,
+  Code2,
+  UtensilsCrossed,
   Target,
   Heart,
   Shield,
@@ -17,88 +15,70 @@ import {
 export const COMPANY_INFO = {
   name: 'BENBAX LIMITED COMPANY',
   shortName: 'BENBAX',
-  tagline: 'Your Partner in Strategic Talent Acquisition',
-  description: 'Connecting exceptional talent with leading organizations across Ghana',
-  email: 'benbaxlimitedcompany@gmail.com',
+  tagline: 'Software, People, and Hospitality Solutions',
+  description:
+    'Delivering software development, recruitment and HR services, and restaurant solutions across Ghana.',
+  email: 'benbaxventures@gmail.com',
+  restaurantPhone: '0533525034',
   location: 'Katamanso Apolonia',
   mapQuery: 'Katamanso Apolonia, Tema, Ghana',
   mapEmbedUrl: 'https://www.google.com/maps?q=Katamanso+Apolonia,+Tema,+Ghana&output=embed',
   mapDirectionsUrl: 'https://www.google.com/maps/search/?api=1&query=Katamanso+Apolonia,+Tema,+Ghana',
   poBox: 'P.O. Box C02968, TM Tema',
   businessHours: 'Monday - Friday: 8:00 AM - 5:00 PM',
-  vision: 'To be a leading recruitment agency recognized for excellence, integrity, and innovation in talent acquisition.',
-  mission: 'To connect businesses with the right people and empower individuals with meaningful employment opportunities.',
+  vision:
+    'To be a trusted multi-sector company known for software innovation, people excellence, and quality hospitality experiences.',
+  mission:
+    'To build practical software, connect organizations with the right talent, and serve communities through reliable restaurant services.',
 } as const;
 
 export const SERVICES = [
   {
-    id: 'permanent-staffing',
-    title: 'Permanent Staffing Solutions',
-    shortTitle: 'Permanent Staffing',
-    description: 'Full-time placement services connecting businesses with qualified professionals for long-term organizational success.',
+    id: 'software-development',
+    title: 'Software Development',
+    shortTitle: 'Software Development',
+    description:
+      'Custom software engineering for websites, web apps, and digital business systems that improve efficiency and growth.',
+    icon: Code2,
+    details:
+      'Software development is our primary service focus. We design, build, and support custom digital solutions including websites, web applications, workflow automation tools, and integrated platforms. Our team handles the complete lifecycle from product discovery and UI/UX through development, testing, deployment, and ongoing optimization.',
+    benefits: [
+      'Custom web and business application development',
+      'System integration and process automation',
+      'Scalable architecture, testing, and deployment',
+      'Ongoing maintenance and technical support'
+    ]
+  },
+  {
+    id: 'recruitment-hr-services',
+    title: 'Recruitment and HR Services',
+    shortTitle: 'Recruitment & HR',
+    description:
+      'End-to-end hiring and HR support services for employers and professionals across multiple industries.',
     icon: Users,
-    details: 'We specialize in sourcing and placing permanent employees across various industries and job levels. Our comprehensive screening process ensures candidates not only have the required skills but also align with your company culture and values.',
+    details:
+      'We deliver recruitment and HR services that help organizations hire faster and retain better-fit talent. Our support covers permanent recruitment, contract staffing, executive hiring support, and practical HR advisory to strengthen workforce performance.',
     benefits: [
-      'Thorough candidate screening and vetting',
-      'Cultural fit assessment',
-      'Guaranteed replacement periods',
-      'Post-placement support'
+      'Permanent, contract, and project-based hiring support',
+      'Structured candidate screening and shortlisting',
+      'HR advisory and workforce planning guidance',
+      'Improved hiring speed and role fit quality'
     ]
   },
   {
-    id: 'temporary-staffing',
-    title: 'Temporary and Contract Staffing',
-    shortTitle: 'Temporary Staffing',
-    description: 'Flexible staffing solutions for project-based needs, seasonal demands, and interim coverage.',
-    icon: Clock,
-    details: 'Our temporary staffing services provide businesses with the flexibility to scale their workforce up or down based on demand. Perfect for seasonal peaks, special projects, or covering employee absences.',
+    id: 'restaurant-services',
+    title: 'Restaurant Services',
+    shortTitle: 'Restaurant Services',
+    description:
+      'Quality food and hospitality services delivered through dependable restaurant operations and customer care.',
+    icon: UtensilsCrossed,
+    details:
+      'Our restaurant services are built around quality meals, hygiene standards, and consistent customer satisfaction. We support dine-in and takeaway experiences while also providing catering for events and corporate engagements.',
     benefits: [
-      'Quick turnaround time',
-      'Pre-screened talent pool',
-      'Flexible engagement terms',
-      'Payroll management included'
-    ]
-  },
-  {
-    id: 'executive-search',
-    title: 'Executive Search & Headhunting',
-    shortTitle: 'Executive Search',
-    description: 'Confidential recruitment for senior-level and executive positions requiring specialized expertise.',
-    icon: Briefcase,
-    details: 'Our executive search service targets high-caliber professionals for leadership roles. We employ discreet, targeted approaches to identify and attract top-tier talent who can drive your organization forward.',
-    benefits: [
-      'Confidential search process',
-      'Access to passive candidates',
-      'Comprehensive leadership assessment',
-      'Market intelligence and insights'
-    ]
-  },
-  {
-    id: 'rpo',
-    title: 'Recruitment Process Outsourcing (RPO)',
-    shortTitle: 'RPO Services',
-    description: 'Comprehensive recruitment management tailored to your organization\'s needs and growth objectives.',
-    icon: Settings,
-    details: 'Our RPO services allow you to outsource all or part of your recruitment function. We become an extension of your team, managing the entire hiring process with our expertise and technology.',
-    benefits: [
-      'Scalable recruitment solutions',
-      'Cost-effective hiring',
-      'Advanced recruitment technology',
-      'Dedicated recruitment team'
-    ]
-  },
-  {
-    id: 'career-advisory',
-    title: 'Career Advisory, Training, and Workshops',
-    shortTitle: 'Career Development',
-    description: 'Professional development services empowering job seekers and enhancing organizational capabilities.',
-    icon: GraduationCap,
-    details: 'We offer comprehensive career development services including CV writing, interview preparation, career coaching, and corporate training programs designed to enhance professional skills and employability.',
-    benefits: [
-      'CV writing and optimization',
-      'Interview preparation coaching',
-      'Career planning guidance',
-      'Corporate training programs'
+      'Quality meal preparation and menu planning',
+      'Clean, safe, and compliant food operations',
+      'Reliable dine-in and takeaway service delivery',
+      'Event and corporate catering support'
     ]
   },
 ] as const;

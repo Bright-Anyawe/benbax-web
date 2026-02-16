@@ -10,7 +10,8 @@ const ServicesPreview = () => {
       <div className="mb-12 text-center">
         <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">Our Services</h2>
         <p className="mx-auto max-w-3xl text-lg text-slate-600">
-          We provide a complete suite of recruitment and HR solutions tailored to employers and job seekers.
+          Our services are led by Software Development, followed by Recruitment and HR Services, and Restaurant
+          Services.
         </p>
       </div>
 

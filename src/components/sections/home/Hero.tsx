@@ -13,24 +13,24 @@ const Hero = () => {
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
           <div className="max-w-3xl">
             <p className="mb-4 animate-fade-up text-sm font-semibold uppercase tracking-wider text-amber-100">
-              Recruitment and HR Services
+              Software Development | Recruitment &amp; HR | Restaurant Services
             </p>
             <h1 className="mb-6 animate-fade-up [animation-delay:120ms] text-balance text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
-              Your Partner in Strategic Talent Acquisition
+              Building Software, Teams, and Hospitality Experiences
             </h1>
             <p className="mb-8 max-w-2xl animate-fade-up [animation-delay:220ms] text-lg text-slate-100 md:text-xl">
-              Connecting exceptional talent with leading organizations across Ghana through ethical, professional, and
-              people-first recruitment solutions.
+              We deliver custom software development as our primary focus, then provide reliable recruitment and HR
+              services, and quality restaurant solutions for our clients and communities.
             </p>
 
             <div className="mb-8 grid gap-3 text-sm text-slate-100 sm:grid-cols-2">
               <div className="inline-flex animate-fade-up items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm [animation-delay:320ms]">
                 <CheckCircle2 className="h-4 w-4 text-amber-200" />
-                Ethical & transparent recruitment
+                End-to-end software delivery
               </div>
               <div className="inline-flex animate-fade-up items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm [animation-delay:380ms]">
                 <MapPin className="h-4 w-4 text-amber-200" />
-                Local market expertise in Ghana
+                Recruitment and hospitality expertise
               </div>
             </div>
 

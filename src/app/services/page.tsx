@@ -7,16 +7,21 @@ import { SERVICES } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Explore BENBAX LIMITED COMPANY recruitment services including permanent staffing, contract staffing, executive search, RPO, and career advisory.',
-  keywords: ['staffing solutions Ghana', 'executive search Ghana', 'RPO services', 'career advisory'],
+    'Explore BENBAX LIMITED COMPANY services with a primary focus on software development, followed by recruitment and HR services, and restaurant services.',
+  keywords: [
+    'software development Ghana',
+    'recruitment and HR services',
+    'restaurant services',
+    'digital solutions company',
+  ],
 };
 
 export default function ServicesPage() {
   return (
     <Section>
       <PageHeader
-        title="Recruitment and HR Services"
-        description="Five focused service areas designed to help employers hire effectively and help candidates grow professionally."
+        title="Our Core Services"
+        description="Software Development is our lead focus, followed by Recruitment and HR Services, then Restaurant Services."
       />
 
       <div className="space-y-6">

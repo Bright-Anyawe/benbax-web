@@ -7,8 +7,8 @@ import { COMPANY_INFO, CORE_VALUES } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Learn about BENBAX LIMITED COMPANY, our mission, vision, and core values driving recruitment excellence in Ghana.',
-  keywords: ['about BENBAX LIMITED COMPANY', 'recruitment mission', 'HR values', 'Ghana recruitment company'],
+    'Learn about BENBAX LIMITED COMPANY, our mission, vision, and values across software development, recruitment and HR services, and restaurant services in Ghana.',
+  keywords: ['about BENBAX LIMITED COMPANY', 'software development mission', 'HR values', 'restaurant services'],
 };
 
 export default function AboutPage() {
@@ -17,7 +17,7 @@ export default function AboutPage() {
       <Section>
         <PageHeader
           title="About BENBAX LIMITED COMPANY"
-          description="A people-first recruitment and HR services company helping businesses and professionals grow across Ghana."
+          description="A multi-sector company focused first on Software Development, followed by Recruitment and HR Services, and Restaurant Services."
         />
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">

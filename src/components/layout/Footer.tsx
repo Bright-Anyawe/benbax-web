@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import { Mail, MapPin, Inbox } from 'lucide-react';
+import { Mail, MapPin, Inbox, Phone } from 'lucide-react';
 import { COMPANY_INFO, NAV_LINKS } from '@/lib/constants';
 import Logo from '../common/Logo';
-import { formatMailto } from '@/lib/utils';
+import { formatMailto, formatTel } from '@/lib/utils';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -110,6 +110,15 @@ const Footer: React.FC = () => {
                   className="text-sm text-slate-400 hover:text-white transition-colors break-all"
                 >
                   {COMPANY_INFO.email}
+                </a>
+              </li>
+              <li className="flex items-start space-x-3">
+                <Phone className="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                <a
+                  href={formatTel(COMPANY_INFO.restaurantPhone)}
+                  className="text-sm text-slate-400 hover:text-white transition-colors"
+                >
+                  Restaurant: {COMPANY_INFO.restaurantPhone}
                 </a>
               </li>
             </ul>

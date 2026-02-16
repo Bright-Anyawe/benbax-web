@@ -13,8 +13,8 @@ import { COMPANY_INFO } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Home',
   description:
-    'BENBAX LIMITED COMPANY helps employers hire top talent and supports job seekers with recruitment and career services in Ghana.',
-  keywords: ['recruitment agency Ghana', 'talent acquisition', 'staffing company', 'job seekers'],
+    'BENBAX LIMITED COMPANY delivers software development, recruitment and HR services, and restaurant services in Ghana.',
+  keywords: ['software development Ghana', 'recruitment and HR services', 'restaurant services', 'BENBAX'],
 };
 
 export default function HomePage() {
@@ -32,8 +32,8 @@ export default function HomePage() {
           <div className="animate-fade-up">
             <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">Built on Integrity, Focused on People</h2>
             <p className="mb-4 text-slate-600">
-              {COMPANY_INFO.shortName} delivers recruitment support grounded in ethical practices, local market understanding,
-              and professional service.
+              {COMPANY_INFO.shortName} delivers software, recruitment, and restaurant services grounded in ethical
+              practices, practical execution, and professional standards.
             </p>
             <p className="mb-6 text-slate-600">
               We work with both growing businesses and individual professionals to create sustainable employment outcomes.
@@ -57,7 +57,8 @@ export default function HomePage() {
           <div className="animate-fade-up rounded-2xl bg-primary-50 p-8 [animation-delay:120ms]">
             <h3 className="mb-3 text-2xl font-semibold text-primary-dark">Ready to work with us?</h3>
             <p className="mb-6 text-slate-700">
-              Whether you need exceptional candidates or your next career opportunity, our team is ready to support your next step.
+              Whether you need a software solution, workforce support, or restaurant service partnership, our team is
+              ready to support your next step.
             </p>
             <Link
               href="/contact"
