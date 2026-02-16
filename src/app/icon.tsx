@@ -1,13 +1,19 @@
 import { ImageResponse } from 'next/og';
+import { readFile } from 'node:fs/promises';
+import { join } from 'node:path';
 
 export const size = {
-  width: 32,
-  height: 32,
+  width: 64,
+  height: 64,
 };
 
 export const contentType = 'image/png';
 
-export default function Icon() {
+export default async function Icon() {
+  const logoPath = join(process.cwd(), 'public', 'images', 'benbax-company-ltd.png');
+  const logoBuffer = await readFile(logoPath);
+  const logoDataUri = `data:image/png;base64,${logoBuffer.toString('base64')}`;
+
   return new ImageResponse(
     (
       <div
@@ -15,17 +21,11 @@ export default function Icon() {
           display: 'flex',
           width: '100%',
           height: '100%',
-          alignItems: 'center',
-          justifyContent: 'center',
-          background: '#2EBC3B',
-          color: 'white',
-          fontSize: 18,
-          fontWeight: 700,
-          fontFamily: 'Arial',
+          backgroundImage: `url(${logoDataUri})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
-      >
-        B
-      </div>
+      />
     ),
     {
       ...size,

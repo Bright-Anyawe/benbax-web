@@ -9,16 +9,22 @@ import {
   MapPin,
   Handshake,
   TrendingUp,
-  Award
+  Award,
+  Truck,
+  HardHat,
+  Megaphone,
+  Ship,
 } from 'lucide-react';
 
 export const COMPANY_INFO = {
   name: 'BENBAX LIMITED COMPANY',
   shortName: 'BENBAX',
-  tagline: 'Software, People, and Hospitality Solutions',
+  tagline: 'Software, People, Hospitality, and Multi-Sector Business Solutions',
   description:
-    'Delivering software development, recruitment and HR services, and restaurant solutions across Ghana.',
+    'Delivering software development, recruitment and HR services, restaurant solutions, transportation, construction, marketing, and import/export services across Ghana.',
   email: 'benbaxventures@gmail.com',
+  phone: '0546013031',
+  phoneAlt: '0598204414',
   restaurantPhone: '0533525034',
   location: 'Katamanso Apolonia',
   mapQuery: 'Katamanso Apolonia, Tema, Ghana',
@@ -40,14 +46,15 @@ export const SERVICES = [
     description:
       'Custom software engineering for websites, web apps, and digital business systems that improve efficiency and growth.',
     icon: Code2,
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80',
     details:
       'Software development is our primary service focus. We design, build, and support custom digital solutions including websites, web applications, workflow automation tools, and integrated platforms. Our team handles the complete lifecycle from product discovery and UI/UX through development, testing, deployment, and ongoing optimization.',
     benefits: [
       'Custom web and business application development',
       'System integration and process automation',
       'Scalable architecture, testing, and deployment',
-      'Ongoing maintenance and technical support'
-    ]
+      'Ongoing maintenance and technical support',
+    ],
   },
   {
     id: 'recruitment-hr-services',
@@ -56,14 +63,15 @@ export const SERVICES = [
     description:
       'End-to-end hiring and HR support services for employers and professionals across multiple industries.',
     icon: Users,
+    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80',
     details:
       'We deliver recruitment and HR services that help organizations hire faster and retain better-fit talent. Our support covers permanent recruitment, contract staffing, executive hiring support, and practical HR advisory to strengthen workforce performance.',
     benefits: [
       'Permanent, contract, and project-based hiring support',
       'Structured candidate screening and shortlisting',
       'HR advisory and workforce planning guidance',
-      'Improved hiring speed and role fit quality'
-    ]
+      'Improved hiring speed and role fit quality',
+    ],
   },
   {
     id: 'restaurant-services',
@@ -72,14 +80,83 @@ export const SERVICES = [
     description:
       'Quality food and hospitality services delivered through dependable restaurant operations and customer care.',
     icon: UtensilsCrossed,
+    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
     details:
       'Our restaurant services are built around quality meals, hygiene standards, and consistent customer satisfaction. We support dine-in and takeaway experiences while also providing catering for events and corporate engagements.',
     benefits: [
       'Quality meal preparation and menu planning',
       'Clean, safe, and compliant food operations',
       'Reliable dine-in and takeaway service delivery',
-      'Event and corporate catering support'
-    ]
+      'Event and corporate catering support',
+    ],
+  },
+  {
+    id: 'transportation-delivery',
+    title: 'Transportation and Delivery Services',
+    shortTitle: 'Transportation & Delivery',
+    description:
+      'Reliable transportation and delivery solutions for businesses and individuals across Ghana.',
+    icon: Truck,
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80',
+    details:
+      'BENBAX provides dependable transportation and delivery services designed to move goods safely and on time. We support local and regional logistics needs including scheduled deliveries, bulk transport, and last-mile distribution for businesses of all sizes.',
+    benefits: [
+      'Local and regional goods transportation',
+      'Scheduled and on-demand delivery options',
+      'Last-mile distribution for businesses',
+      'Safe handling and tracking of shipments',
+    ],
+  },
+  {
+    id: 'building-construction',
+    title: 'Building and Construction Services',
+    shortTitle: 'Building & Construction',
+    description:
+      'Professional building and construction services from planning through project completion.',
+    icon: HardHat,
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
+    details:
+      'Our building and construction division delivers quality structures from residential builds to commercial projects. We manage the full construction lifecycle including site assessment, structural design coordination, project management, and finishing works.',
+    benefits: [
+      'Residential and commercial building projects',
+      'Site assessment and project planning',
+      'Quality materials sourcing and management',
+      'On-time project delivery and finishing works',
+    ],
+  },
+  {
+    id: 'marketing-services',
+    title: 'Marketing Services',
+    shortTitle: 'Marketing Services',
+    description:
+      'Strategic marketing solutions to grow your brand visibility and reach your target audience effectively.',
+    icon: Megaphone,
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+    details:
+      'BENBAX marketing services help businesses build brand awareness and connect with their target markets. We offer digital marketing strategy, social media management, content creation, and promotional campaign execution tailored to the Ghanaian market.',
+    benefits: [
+      'Digital marketing strategy and execution',
+      'Social media management and content creation',
+      'Brand development and positioning',
+      'Campaign planning and performance tracking',
+    ],
+  },
+  {
+    id: 'import-export',
+    title: 'Import and Export Services',
+    shortTitle: 'Import & Export',
+    description:
+      'Facilitating international trade with reliable import and export logistics and documentation support.',
+    icon: Ship,
+    image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80',
+    details:
+      'We support businesses engaged in international trade by managing import and export logistics, customs documentation, and supply chain coordination. Our services reduce friction in cross-border commerce and help clients move goods between Ghana and international markets.',
+    benefits: [
+      'Import and export logistics management',
+      'Customs documentation and compliance support',
+      'Supply chain coordination and tracking',
+      'Trade advisory for cross-border commerce',
+    ],
   },
 ] as const;
 

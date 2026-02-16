@@ -18,7 +18,7 @@ const localBusinessSchema = {
   '@type': 'LocalBusiness',
   name: COMPANY_INFO.name,
   email: COMPANY_INFO.email,
-  telephone: COMPANY_INFO.restaurantPhone,
+  telephone: COMPANY_INFO.phone,
   description: COMPANY_INFO.description,
   address: {
     '@type': 'PostalAddress',
@@ -70,9 +70,17 @@ export default function ContactPage() {
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="mt-0.5 h-5 w-5 text-primary" />
-                <a href={formatTel(COMPANY_INFO.restaurantPhone)} className="hover:text-primary">
-                  Restaurant Contact: {COMPANY_INFO.restaurantPhone}
-                </a>
+                <div className="space-y-1">
+                  <a href={formatTel(COMPANY_INFO.phone)} className="block hover:text-primary">
+                    {COMPANY_INFO.phone}
+                  </a>
+                  <a href={formatTel(COMPANY_INFO.phoneAlt)} className="block hover:text-primary">
+                    {COMPANY_INFO.phoneAlt}
+                  </a>
+                  <a href={formatTel(COMPANY_INFO.restaurantPhone)} className="block hover:text-primary">
+                    Restaurant: {COMPANY_INFO.restaurantPhone}
+                  </a>
+                </div>
               </li>
             </ul>
           </div>

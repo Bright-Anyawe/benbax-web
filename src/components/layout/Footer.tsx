@@ -114,12 +114,26 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
-                <a
-                  href={formatTel(COMPANY_INFO.restaurantPhone)}
-                  className="text-sm text-slate-400 hover:text-white transition-colors"
-                >
-                  Restaurant: {COMPANY_INFO.restaurantPhone}
-                </a>
+                <div className="space-y-1">
+                  <a
+                    href={formatTel(COMPANY_INFO.phone)}
+                    className="block text-sm text-slate-400 hover:text-white transition-colors"
+                  >
+                    {COMPANY_INFO.phone}
+                  </a>
+                  <a
+                    href={formatTel(COMPANY_INFO.phoneAlt)}
+                    className="block text-sm text-slate-400 hover:text-white transition-colors"
+                  >
+                    {COMPANY_INFO.phoneAlt}
+                  </a>
+                  <a
+                    href={formatTel(COMPANY_INFO.restaurantPhone)}
+                    className="block text-sm text-slate-400 hover:text-white transition-colors"
+                  >
+                    Restaurant: {COMPANY_INFO.restaurantPhone}
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
@@ -132,7 +146,7 @@ const Footer: React.FC = () => {
               &copy; {currentYear} {COMPANY_INFO.name}. All rights reserved.
             </p>
             <p className="text-sm text-slate-400 text-center md:text-right">
-              Powered by Excellence, Integrity & Innovation
+              Powered by Benbax software developers
             </p>
           </div>
         </div>

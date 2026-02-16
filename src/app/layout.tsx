@@ -11,7 +11,11 @@ const inter = Inter({
   display: 'swap',
 });
 
+const siteUrl = 'https://benbaxlimitedcompany.com';
+const logoPath = '/images/benbax-company-ltd.png';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${COMPANY_INFO.shortName} | Software Development, Recruitment & HR, Restaurant Services`,
     template: `%s | ${COMPANY_INFO.shortName}`,
@@ -27,11 +31,32 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  icons: {
+    icon: [{ url: logoPath, type: 'image/png' }],
+    shortcut: [{ url: logoPath, type: 'image/png' }],
+    apple: [{ url: logoPath, type: 'image/png' }],
+  },
   openGraph: {
     title: `${COMPANY_INFO.shortName} | Software Development, Recruitment & HR, Restaurant Services`,
     description: COMPANY_INFO.description,
     type: 'website',
     locale: 'en_GH',
+    url: siteUrl,
+    siteName: COMPANY_INFO.shortName,
+    images: [
+      {
+        url: logoPath,
+        width: 1024,
+        height: 1024,
+        alt: `${COMPANY_INFO.shortName} logo`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${COMPANY_INFO.shortName} | Software Development, Recruitment & HR, Restaurant Services`,
+    description: COMPANY_INFO.description,
+    images: [logoPath],
   },
 };
 
@@ -41,7 +66,7 @@ const organizationSchema = {
   name: COMPANY_INFO.name,
   url: 'https://benbaxlimitedcompany.com',
   email: COMPANY_INFO.email,
-  telephone: COMPANY_INFO.restaurantPhone,
+  telephone: COMPANY_INFO.phone,
   address: {
     '@type': 'PostalAddress',
     addressLocality: COMPANY_INFO.location,
