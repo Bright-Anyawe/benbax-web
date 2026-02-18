@@ -23,9 +23,9 @@ export const COMPANY_INFO = {
   description:
     'Delivering software development, recruitment and HR services, restaurant solutions, transportation, construction, marketing, and import/export services across Ghana.',
   email: 'benbaxventures@gmail.com',
-  phone: '0546013031',
-  phoneAlt: '0598204414',
-  restaurantPhone: '0533525034',
+  phone: '+233 546 013 031',
+  phoneAlt: '+233 598 204 414',
+  restaurantPhone: '+233 533 525 034',
   location: 'Katamanso Apolonia',
   mapQuery: 'Katamanso Apolonia, Tema, Ghana',
   mapEmbedUrl: 'https://www.google.com/maps?q=Katamanso+Apolonia,+Tema,+Ghana&output=embed',
@@ -46,7 +46,7 @@ export const SERVICES = [
     description:
       'Custom software engineering for websites, web apps, and digital business systems that improve efficiency and growth.',
     icon: Code2,
-    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=80',
     details:
       'Software development is our primary service focus. We design, build, and support custom digital solutions including websites, web applications, workflow automation tools, and integrated platforms. Our team handles the complete lifecycle from product discovery and UI/UX through development, testing, deployment, and ongoing optimization.',
     benefits: [
@@ -63,7 +63,7 @@ export const SERVICES = [
     description:
       'End-to-end hiring and HR support services for employers and professionals across multiple industries.',
     icon: Users,
-    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80',
     details:
       'We deliver recruitment and HR services that help organizations hire faster and retain better-fit talent. Our support covers permanent recruitment, contract staffing, executive hiring support, and practical HR advisory to strengthen workforce performance.',
     benefits: [
@@ -80,7 +80,7 @@ export const SERVICES = [
     description:
       'Quality food and hospitality services delivered through dependable restaurant operations and customer care.',
     icon: UtensilsCrossed,
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80',
     details:
       'Our restaurant services are built around quality meals, hygiene standards, and consistent customer satisfaction. We support dine-in and takeaway experiences while also providing catering for events and corporate engagements.',
     benefits: [
@@ -97,7 +97,7 @@ export const SERVICES = [
     description:
       'Reliable transportation and delivery solutions for businesses and individuals across Ghana.',
     icon: Truck,
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80',
     details:
       'BENBAX provides dependable transportation and delivery services designed to move goods safely and on time. We support local and regional logistics needs including scheduled deliveries, bulk transport, and last-mile distribution for businesses of all sizes.',
     benefits: [
@@ -114,7 +114,7 @@ export const SERVICES = [
     description:
       'Professional building and construction services from planning through project completion.',
     icon: HardHat,
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80',
     details:
       'Our building and construction division delivers quality structures from residential builds to commercial projects. We manage the full construction lifecycle including site assessment, structural design coordination, project management, and finishing works.',
     benefits: [
@@ -131,7 +131,7 @@ export const SERVICES = [
     description:
       'Strategic marketing solutions to grow your brand visibility and reach your target audience effectively.',
     icon: Megaphone,
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&q=80',
     details:
       'BENBAX marketing services help businesses build brand awareness and connect with their target markets. We offer digital marketing strategy, social media management, content creation, and promotional campaign execution tailored to the Ghanaian market.',
     benefits: [
@@ -148,7 +148,7 @@ export const SERVICES = [
     description:
       'Facilitating international trade with reliable import and export logistics and documentation support.',
     icon: Ship,
-    image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80',
     details:
       'We support businesses engaged in international trade by managing import and export logistics, customs documentation, and supply chain coordination. Our services reduce friction in cross-border commerce and help clients move goods between Ghana and international markets.',
     benefits: [
@@ -218,6 +218,7 @@ export const NAV_LINKS = [
   { href: '/why-choose-us', label: 'Why Choose Us' },
   { href: '/careers', label: 'Job Seekers' },
   { href: '/employers', label: 'Employers' },
+  { href: '/restaurant', label: 'Restaurant' },
   { href: '/contact', label: 'Contact' },
 ] as const;
 
