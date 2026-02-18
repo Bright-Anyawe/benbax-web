@@ -53,11 +53,11 @@ const Hero = () => {
           <div className="relative mx-auto w-full max-w-xl animate-fade-up [animation-delay:300ms]">
             <div className="relative overflow-hidden rounded-3xl border border-white/25 bg-white/10 p-3 shadow-2xl shadow-slate-900/25 backdrop-blur-sm">
               <Image
-                src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=800&q=80"
-                alt="African professionals collaborating in a modern business workspace"
-                width={860}
-                height={620}
-                className="h-auto w-full rounded-2xl object-cover"
+                src="/images/RP.jpg"
+                alt="Ghanaian software professional working at a modern coding workstation"
+                width={540}
+                height={304}
+                className="h-auto w-full rounded-2xl object-contain bg-slate-900/20"
                 priority
               />
 
