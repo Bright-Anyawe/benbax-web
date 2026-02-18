@@ -222,6 +222,27 @@ export const NAV_LINKS = [
   { href: '/contact', label: 'Contact' },
 ] as const;
 
+export const COMPANY_REPRESENTATIVES = [
+  {
+    id: 'it-manager',
+    name: 'BENBAX IT Manager',
+    title: 'IT Manager',
+    image: '/images/IT manager.png',
+    alt: 'Portrait of BENBAX IT Manager',
+    description:
+      'Leads BENBAX digital operations and technology systems to keep projects reliable, secure, and scalable.',
+  },
+  {
+    id: 'general-manager',
+    name: 'BENBAX General Manager',
+    title: 'General Manager',
+    image: '/images/Gen. manager 2.png',
+    alt: 'Portrait of BENBAX General Manager',
+    description:
+      'Oversees company operations and service delivery to ensure professional standards across every BENBAX division.',
+  },
+] as const;
+
 export const CORE_VALUES = [
   {
     id: 'excellence',
@@ -402,6 +423,7 @@ export const FAQ_ITEMS = [
 export type Service = typeof SERVICES[number];
 export type ValueProposition = typeof VALUE_PROPOSITIONS[number];
 export type NavLink = typeof NAV_LINKS[number];
+export type CompanyRepresentative = typeof COMPANY_REPRESENTATIVES[number];
 export type CoreValue = typeof CORE_VALUES[number];
 export type TrustMetric = typeof TRUST_METRICS[number];
 export type CaseStudy = typeof CASE_STUDIES[number];

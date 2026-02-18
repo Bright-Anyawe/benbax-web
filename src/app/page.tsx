@@ -7,6 +7,7 @@ import TrustMetrics from '@/components/sections/home/TrustMetrics';
 import CaseStudies from '@/components/sections/home/CaseStudies';
 import ValueProposition from '@/components/sections/home/ValueProposition';
 import FaqSection from '@/components/sections/home/FaqSection';
+import CompanyRepresentatives from '@/components/sections/home/CompanyRepresentatives';
 import Section from '@/components/ui/Section';
 import { COMPANY_INFO } from '@/lib/constants';
 
@@ -24,6 +25,7 @@ export default function HomePage() {
       <ServicesPreview />
       <TrustMetrics />
       <ValueProposition />
+      <CompanyRepresentatives />
       <CaseStudies />
       <FaqSection />
 
