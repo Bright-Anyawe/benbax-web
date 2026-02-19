@@ -224,11 +224,11 @@ export const NAV_LINKS = [
 
 export const COMPANY_REPRESENTATIVES = [
   {
-    id: 'it-manager',
-    name: 'BENBAX IT Manager',
-    title: 'IT Manager',
-    image: '/images/IT manager.png',
-    alt: 'Portrait of BENBAX IT Manager',
+    id: 'software-engineer',
+    name: 'BENBAX Software Engineer',
+    title: 'Software Engineer',
+    image: '/images/Software Engineer.jpeg',
+    alt: 'Portrait of BENBAX Software Engineer',
     description:
       'Leads BENBAX digital operations and technology systems to keep projects reliable, secure, and scalable.',
   },
