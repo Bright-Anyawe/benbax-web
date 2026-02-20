@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import CeoContactBadge from '@/components/layout/CeoContactBadge';
 import { COMPANY_INFO } from '@/lib/constants';
 
 const inter = Inter({
@@ -91,6 +92,7 @@ export default function RootLayout({
         <Header />
         <main className="min-h-screen pt-20">{children}</main>
         <Footer />
+        <CeoContactBadge />
       </body>
     </html>
   );
