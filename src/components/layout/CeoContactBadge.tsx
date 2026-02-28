@@ -3,8 +3,8 @@
 import { Phone, X } from 'lucide-react';
 import { useState } from 'react';
 
-const CEO_PHONE = '+233 054 6013031';
-const CEO_PHONE_HREF = 'tel:+2330546013031';
+const CEO_PHONE = '+233 54 6013031';
+const CEO_PHONE_HREF = 'tel:+233546013031';
 
 export default function CeoContactBadge() {
   const [dismissed, setDismissed] = useState(false);

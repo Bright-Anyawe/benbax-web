@@ -1,0 +1,24 @@
+{
+  "name": "BENBAX LIMITED COMPANY",
+  "short_name": "BENBAX",
+  "description": "Delivering software development, recruitment and HR services, restaurant solutions, transportation, construction, marketing, and import/export services across Ghana.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2EBC3B",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

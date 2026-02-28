@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
@@ -15,19 +15,27 @@ const inter = Inter({
 const siteUrl = 'https://benbaxlimitedcompany.com';
 const logoPath = '/images/benbax-company-ltd.png';
 
+export const viewport: Viewport = {
+  themeColor: '#2EBC3B',
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${COMPANY_INFO.shortName} | Software Development, Recruitment & HR, Restaurant Services`,
+    default: 'Benbax Company Limited | Multi-Sector Services in Ghana',
     template: `%s | ${COMPANY_INFO.shortName}`,
   },
-  description: COMPANY_INFO.description,
+  description:
+    'Benbax Ventures Company Limited offers professional HR & Recruitment, Software Development, Construction, and Logistics services in Tema, Ghana. Partner with us today.',
   keywords: [
-    'software development Ghana',
-    'recruitment and HR services Ghana',
-    'restaurant services Ghana',
-    'digital solutions',
-    'BENBAX LIMITED COMPANY',
+    'Benbax',
+    'Benbax Ventures',
+    'Benbax Ventures Company Limited',
+    'Benbax Ghana',
+    'Benbaxco',
+    'Recruitment Agency Tema',
+    'Software Development Ghana',
+    'Construction companies in Tema',
   ],
   alternates: {
     canonical: '/',
@@ -38,8 +46,9 @@ export const metadata: Metadata = {
     apple: [{ url: logoPath, type: 'image/png' }],
   },
   openGraph: {
-    title: `${COMPANY_INFO.shortName} | Software Development, Recruitment & HR, Restaurant Services`,
-    description: COMPANY_INFO.description,
+    title: 'Benbax Company Limited | Multi-Sector Services in Ghana',
+    description:
+      'Benbax Ventures Company Limited offers professional HR & Recruitment, Software Development, Construction, and Logistics services in Tema, Ghana. Partner with us today.',
     type: 'website',
     locale: 'en_GH',
     url: siteUrl,
@@ -55,9 +64,19 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${COMPANY_INFO.shortName} | Software Development, Recruitment & HR, Restaurant Services`,
-    description: COMPANY_INFO.description,
+    title: 'Benbax Company Limited | Multi-Sector Services in Ghana',
+    description:
+      'Benbax Ventures Company Limited offers professional HR & Recruitment, Software Development, Construction, and Logistics services in Tema, Ghana. Partner with us today.',
     images: [logoPath],
+  },
+  verification: {
+    google: 'RW_Fm0gMyYF5mbEnIiw5Au0ldLPLekazeI4Wq5Cwjbk',
+  },
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'BENBAX',
   },
 };
 
