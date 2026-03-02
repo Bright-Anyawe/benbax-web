@@ -4,7 +4,7 @@ import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import CeoContactBadge from '@/components/layout/CeoContactBadge';
-import { COMPANY_INFO } from '@/lib/constants';
+import { COMPANY_INFO, SOCIAL_LINKS } from '@/lib/constants';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -22,20 +22,19 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Benbax Company Limited | Multi-Sector Services in Ghana',
+    default:
+      'Benbax Ventures Company Limited | HR, Software & Construction Ghana',
     template: `%s | ${COMPANY_INFO.shortName}`,
   },
   description:
-    'Benbax Ventures Company Limited offers professional HR & Recruitment, Software Development, Construction, and Logistics services in Tema, Ghana. Partner with us today.',
+    'Benbax Ventures (Benbaxco) is a multi-sector leader in Tema, Ghana specializing in Recruitment, Software Development, Construction, and Logistics.',
   keywords: [
     'Benbax',
-    'Benbax Ventures',
-    'Benbax Ventures Company Limited',
-    'Benbax Ghana',
     'Benbaxco',
-    'Recruitment Agency Tema',
-    'Software Development Ghana',
-    'Construction companies in Tema',
+    'Benbax Ventures',
+    'HR services Tema',
+    'Software development Ghana',
+    'Construction companies Apolonia',
   ],
   alternates: {
     canonical: '/',
@@ -46,9 +45,10 @@ export const metadata: Metadata = {
     apple: [{ url: logoPath, type: 'image/png' }],
   },
   openGraph: {
-    title: 'Benbax Company Limited | Multi-Sector Services in Ghana',
+    title:
+      'Benbax Ventures Company Limited | HR, Software & Construction Ghana',
     description:
-      'Benbax Ventures Company Limited offers professional HR & Recruitment, Software Development, Construction, and Logistics services in Tema, Ghana. Partner with us today.',
+      'Benbax Ventures (Benbaxco) is a multi-sector leader in Tema, Ghana specializing in Recruitment, Software Development, Construction, and Logistics.',
     type: 'website',
     locale: 'en_GH',
     url: siteUrl,
@@ -64,9 +64,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Benbax Company Limited | Multi-Sector Services in Ghana',
+    title:
+      'Benbax Ventures Company Limited | HR, Software & Construction Ghana',
     description:
-      'Benbax Ventures Company Limited offers professional HR & Recruitment, Software Development, Construction, and Logistics services in Tema, Ghana. Partner with us today.',
+      'Benbax Ventures (Benbaxco) is a multi-sector leader in Tema, Ghana specializing in Recruitment, Software Development, Construction, and Logistics.',
     images: [logoPath],
   },
   verification: {
@@ -84,16 +85,59 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: COMPANY_INFO.name,
-  url: 'https://benbaxlimitedcompany.com',
+  alternateName: ['Benbax Ventures', 'Benbaxco', 'Benbax Ventures Company Limited'],
+  url: siteUrl,
+  logo: `${siteUrl}${logoPath}`,
+  image: `${siteUrl}${logoPath}`,
   email: COMPANY_INFO.email,
   telephone: COMPANY_INFO.phone,
   address: {
     '@type': 'PostalAddress',
-    addressLocality: COMPANY_INFO.location,
+    streetAddress: 'Katamanso Apolonia',
+    addressLocality: 'Tema',
+    addressRegion: 'Greater Accra',
     addressCountry: 'GH',
     postOfficeBoxNumber: COMPANY_INFO.poBox,
   },
   description: COMPANY_INFO.description,
+  sameAs: [SOCIAL_LINKS.facebook, SOCIAL_LINKS.tiktok].filter(Boolean),
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: COMPANY_INFO.phone,
+    contactType: 'customer service',
+    availableLanguage: 'English',
+  },
+};
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: COMPANY_INFO.name,
+  alternateName: ['Benbax Ventures', 'Benbaxco'],
+  url: siteUrl,
+  logo: `${siteUrl}${logoPath}`,
+  image: `${siteUrl}${logoPath}`,
+  email: COMPANY_INFO.email,
+  telephone: COMPANY_INFO.phone,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Katamanso Apolonia',
+    addressLocality: 'Tema',
+    addressRegion: 'Greater Accra',
+    addressCountry: 'GH',
+    postOfficeBoxNumber: COMPANY_INFO.poBox,
+  },
+  openingHours: 'Mo-Fr 08:00-17:00',
+  sameAs: [SOCIAL_LINKS.facebook, SOCIAL_LINKS.tiktok].filter(Boolean),
+  priceRange: '$$',
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Benbax Ventures Company Limited',
+  alternateName: 'Benbaxco',
+  url: siteUrl,
 };
 
 export default function RootLayout({
@@ -107,6 +151,14 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <Header />
         <main className="min-h-screen pt-20">{children}</main>

@@ -324,9 +324,10 @@ export const RECRUITMENT_PROCESS_CANDIDATE = [
 
 export const SOCIAL_LINKS = {
   linkedin: '',
-  facebook: '',
+  facebook: 'https://web.facebook.com/profile.php?id=61588660152569',
   twitter: '',
   instagram: '',
+  tiktok: 'https://www.tiktok.com/@benbaxcompany',
 } as const;
 
 export const TRUST_METRICS = [
