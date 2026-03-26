@@ -19,10 +19,10 @@ import {
 export const COMPANY_INFO = {
   name: 'BENBAX LIMITED COMPANY',
   shortName: 'BENBAX',
-  tagline: 'Software, People, Hospitality, and Multi-Sector Business Solutions',
+  tagline: 'Software Development, Recruitment & HR, and Restaurant Services',
   description:
-    'Delivering software development, recruitment and HR services, restaurant solutions, transportation, construction, marketing, and import/export services across Ghana.',
-  email: 'benbaxventures@gmail.com',
+    'Delivering software development as our core focus, followed by recruitment and HR services, and quality restaurant services across Ghana.',
+  email: 'info@benbaxventures.com',
   phone: '+233 546 013 031',
   phoneAlt: '+233 598 204 414',
   restaurantPhone: '+233 533 525 034',
@@ -38,17 +38,22 @@ export const COMPANY_INFO = {
     'To build practical software, connect organizations with the right talent, and serve communities through reliable restaurant services.',
 } as const;
 
+export const GEOATTEND_INFO = {
+  name: 'Benbax GeoAttend',
+  apkUrl: 'https://expo.dev/accounts/a16-0s-organization/projects/geoattend/builds/af39ce83-61da-462d-859c-ad2128d0f89c',
+} as const;
+
 export const SERVICES = [
   {
     id: 'software-development',
     title: 'Software Development',
     shortTitle: 'Software Development',
     description:
-      'Custom software engineering for websites, web apps, and digital business systems that improve efficiency and growth.',
+      'Custom software engineering for websites, web apps, and digital business systems that improve efficiency, visibility, and growth.',
     icon: Code2,
     image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=80',
     details:
-      'Software development is our primary service focus. We design, build, and support custom digital solutions including websites, web applications, workflow automation tools, and integrated platforms. Our team handles the complete lifecycle from product discovery and UI/UX through development, testing, deployment, and ongoing optimization.',
+      'Software development is our primary service focus. We design, build, and support custom digital solutions including websites, web applications, workflow automation tools, and integrated platforms. Our team handles the complete lifecycle from product discovery and UI/UX through development, testing, deployment, optimization, and long-term support.',
     benefits: [
       'Custom web and business application development',
       'System integration and process automation',

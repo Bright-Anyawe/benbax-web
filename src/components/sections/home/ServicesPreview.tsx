@@ -11,8 +11,8 @@ const ServicesPreview = () => {
       <div className="mb-12 text-center">
         <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">Our Services</h2>
         <p className="mx-auto max-w-3xl text-lg text-slate-600">
-          We deliver professional services across software, people, hospitality, logistics, construction, marketing, and
-          international trade.
+          Our core focus starts with Software Development, followed by Recruitment and HR Services, then Restaurant
+          Services. We also support selected business operations services for growing companies.
         </p>
       </div>
 

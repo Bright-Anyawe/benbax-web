@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowUpRight, MapPin } from 'lucide-react';
+import { ArrowUpRight, Download, MapPin, ShieldCheck, Smartphone } from 'lucide-react';
 import Hero from '@/components/sections/home/Hero';
 import ServicesPreview from '@/components/sections/home/ServicesPreview';
 import TrustMetrics from '@/components/sections/home/TrustMetrics';
@@ -9,12 +9,12 @@ import ValueProposition from '@/components/sections/home/ValueProposition';
 import FaqSection from '@/components/sections/home/FaqSection';
 import CompanyRepresentatives from '@/components/sections/home/CompanyRepresentatives';
 import Section from '@/components/ui/Section';
-import { COMPANY_INFO } from '@/lib/constants';
+import { COMPANY_INFO, GEOATTEND_INFO } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Home',
   description:
-    'BENBAX LIMITED COMPANY delivers software development, recruitment and HR services, and restaurant services in Ghana.',
+    'BENBAX LIMITED COMPANY delivers software development, recruitment and HR services, and restaurant services in Ghana. Download the GeoAttend APK for testing.',
   keywords: ['software development Ghana', 'recruitment and HR services', 'restaurant services', 'BENBAX'],
 };
 
@@ -28,6 +28,48 @@ export default function HomePage() {
       <CompanyRepresentatives />
       <CaseStudies />
       <FaqSection />
+
+      <Section background="gray">
+        <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary-50 via-white to-amber-50 p-8 shadow-sm md:p-10">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase tracking-wide text-white">
+            <Smartphone className="h-4 w-4" />
+            New Mobile App for Testing
+          </div>
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+            <div>
+              <h2 className="mb-3 text-3xl font-extrabold text-slate-900 md:text-4xl">
+                {GEOATTEND_INFO.name} APK Is Ready - Download and Test Now
+              </h2>
+              <p className="mb-5 max-w-3xl text-lg text-slate-700">
+                GeoAttend is our geofenced attendance management system built for institutions in Ghana. It combines GPS
+                geofence verification, QR code check-in, and role-based reporting across mobile and web.
+              </p>
+              <div className="mb-6 grid grid-cols-1 gap-3 text-slate-700 sm:grid-cols-2">
+                <p className="rounded-lg border border-slate-200 bg-white p-3 text-sm">
+                  <ShieldCheck className="mr-2 inline h-4 w-4 text-primary" />
+                  Secure attendance with JWT, geofence enforcement, and duplicate check-in prevention.
+                </p>
+                <p className="rounded-lg border border-slate-200 bg-white p-3 text-sm">
+                  <MapPin className="mr-2 inline h-4 w-4 text-primary" />
+                  Accurate GPS distance checks and QR scans for staff check-in/check-out.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center">
+              <a
+                href={GEOATTEND_INFO.apkUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-base inline-flex animate-pulse items-center justify-center rounded-xl bg-accent-orange px-6 py-4 text-lg font-extrabold text-slate-900 shadow-lg transition hover:scale-[1.02] hover:bg-amber-500 focus:ring-accent-orange"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download {GEOATTEND_INFO.name} APK
+              </a>
+              <p className="mt-3 text-center text-sm font-medium text-slate-600">Tap to test the latest Android build</p>
+            </div>
+          </div>
+        </div>
+      </Section>
 
       <Section>
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">

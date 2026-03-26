@@ -3,9 +3,9 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ArrowRight, Menu } from 'lucide-react';
+import { Download, Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { NAV_LINKS } from '@/lib/constants';
+import { GEOATTEND_INFO, NAV_LINKS } from '@/lib/constants';
 import Logo from '../common/Logo';
 import MobileMenu from './MobileMenu';
 
@@ -75,13 +75,18 @@ const Header: React.FC = () => {
             })}
           </nav>
 
-          <Link
-            href="/contact"
-            className="btn-base hidden rounded-xl bg-accent-orange px-6 py-3 text-base text-slate-900 shadow-lg shadow-amber-500/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-amber-500 hover:text-slate-900 focus:ring-accent-orange xl:inline-flex"
+          <a
+            href={GEOATTEND_INFO.apkUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-base relative hidden animate-bounce rounded-xl bg-accent-orange px-6 py-3 text-base text-slate-900 shadow-lg shadow-amber-500/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-amber-500 hover:text-slate-900 focus:ring-accent-orange [animation-duration:2.4s] xl:inline-flex"
           >
-            Get Started
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+            <span className="absolute -top-2 -right-2 rounded-full bg-red-600 px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-white">
+              New
+            </span>
+            Download {GEOATTEND_INFO.name}
+            <Download className="ml-2 h-4 w-4" />
+          </a>
 
           <button
             onClick={() => setIsMobileMenuOpen(true)}

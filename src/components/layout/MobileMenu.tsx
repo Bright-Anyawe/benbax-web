@@ -3,9 +3,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { X } from 'lucide-react';
+import { Download, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { NAV_LINKS } from '@/lib/constants';
+import { GEOATTEND_INFO, NAV_LINKS } from '@/lib/constants';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -63,13 +63,21 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           </nav>
 
           <div className="border-t p-6">
-            <Link
-              href="/contact"
+            <a
+              href={GEOATTEND_INFO.apkUrl}
+              target="_blank"
+              rel="noreferrer"
               onClick={onClose}
-              className="btn-base w-full rounded-xl bg-accent-orange px-8 py-4 text-lg text-slate-900 shadow-lg shadow-amber-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-amber-500 hover:text-slate-900 focus:ring-accent-orange"
+              className="btn-base relative w-full animate-bounce rounded-xl bg-accent-orange px-8 py-4 text-lg text-slate-900 shadow-lg shadow-amber-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-amber-500 hover:text-slate-900 focus:ring-accent-orange [animation-duration:2.4s]"
             >
-              Get Started
-            </Link>
+              <span className="absolute -top-2 -right-2 rounded-full bg-red-600 px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-white">
+                New
+              </span>
+              <span className="inline-flex items-center">
+                <Download className="mr-2 h-5 w-5" />
+                Download {GEOATTEND_INFO.name}
+              </span>
+            </a>
           </div>
         </div>
       </div>

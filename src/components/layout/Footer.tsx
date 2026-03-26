@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { Mail, MapPin, Inbox, Phone } from 'lucide-react';
-import { COMPANY_INFO, NAV_LINKS, SOCIAL_LINKS } from '@/lib/constants';
+import { Download, Mail, MapPin, Inbox, Phone } from 'lucide-react';
+import { COMPANY_INFO, GEOATTEND_INFO, NAV_LINKS, SOCIAL_LINKS } from '@/lib/constants';
 import Logo from '../common/Logo';
 import { formatMailto, formatTel } from '@/lib/utils';
 
@@ -82,6 +82,15 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
+            <a
+              href={GEOATTEND_INFO.apkUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-5 inline-flex items-center rounded-lg bg-accent-orange px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-amber-500"
+            >
+              <Download className="mr-2 h-4 w-4" />
+              Download {GEOATTEND_INFO.name}
+            </a>
           </div>
 
           {/* Column 3: For Job Seekers & Employers */}
