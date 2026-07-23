@@ -224,6 +224,8 @@ export const NAV_LINKS = [
   { href: '/careers', label: 'Job Seekers' },
   { href: '/employers', label: 'Employers' },
   { href: '/restaurant', label: 'Restaurant' },
+  { href: '/faq', label: 'FAQ' },
+  { href: '/testimonials', label: 'Testimonials' },
   { href: '/contact', label: 'Contact' },
 ] as const;
 
@@ -246,6 +248,7 @@ export const COMPANY_REPRESENTATIVES = [
     description:
       'Oversees company operations and service delivery to ensure professional standards across every BENBAX division.',
   },
+
 ] as const;
 
 export const CORE_VALUES = [
@@ -423,9 +426,134 @@ export const FAQ_ITEMS = [
     answer:
       'Yes. Guarantee terms depend on the engagement type and are defined in the service agreement before project start.',
   },
+  {
+    id: 'software-process',
+    question: 'How does your software development process work?',
+    answer:
+      'We follow a structured lifecycle: discovery and requirements gathering, UI/UX design, development and testing, deployment, and ongoing support. We keep clients involved at every stage with regular updates and demos.',
+  },
+  {
+    id: 'restaurant-hours',
+    question: 'What are your restaurant service hours?',
+    answer:
+      'Our restaurant services operate during standard business hours. For specific hours and reservations, please contact us directly at ' + '+233 533 525 034.',
+  },
+  {
+    id: 'employer-cost',
+    question: 'How much do your recruitment services cost for employers?',
+    answer:
+      'Our fees vary based on the engagement type, role level, and scope of work. We offer competitive pricing and will provide a clear fee structure during our initial consultation.',
+  },
+  {
+    id: 'candidate-process',
+    question: 'What happens after I submit my CV as a job seeker?',
+    answer:
+      'After submitting your CV, we schedule an initial consultation to understand your skills and career goals. We then match you with suitable opportunities, provide interview preparation support, and guide you through the placement process.',
+  },
+  {
+    id: 'software-tech',
+    question: 'What technologies do you use for software development?',
+    answer:
+      'We work with modern technologies including React, Next.js, Node.js, TypeScript, Python, and various databases. We choose the best technology stack based on each project\'s specific requirements and goals.',
+  },
+  {
+    id: 'restaurant-catering',
+    question: 'Do you offer catering services for events?',
+    answer:
+      'Yes, we provide catering services for events and corporate engagements. Contact our restaurant team at ' + '+233 533 525 034 for menu options and booking details.',
+  },
+  {
+    id: 'transport-areas',
+    question: 'What areas do you serve for transportation and delivery?',
+    answer:
+      'We provide transportation and delivery services within Ghana, covering local and regional routes. Contact us for specific route availability and scheduling.',
+  },
+  {
+    id: 'construction-projects',
+    question: 'What types of construction projects do you handle?',
+    answer:
+      'We handle both residential and commercial construction projects, from new builds to renovations. Our team manages the full lifecycle including planning, design coordination, project management, and finishing works.',
+  },
+  {
+    id: 'marketing-services-detail',
+    question: 'What marketing services do you offer?',
+    answer:
+      'We offer digital marketing strategy, social media management, content creation, brand development, and promotional campaign execution tailored to the Ghanaian market.',
+  },
+  {
+    id: 'import-export-countries',
+    question: 'Which countries do you support for import and export?',
+    answer:
+      'We facilitate trade between Ghana and international markets. Contact us to discuss your specific import or export requirements and we will provide guidance on logistics and documentation.',
+  },
 ] as const;
 
-// Type exports for better TypeScript support
+export const TESTIMONIALS = [
+  {
+    id: 'testimonial-1',
+    name: 'Emmanuel K.',
+    role: 'HR Manager, Accra',
+    content:
+      'BENBAX helped us fill three senior positions in under four weeks. Their screening process is thorough and the candidates they presented were well-matched to our requirements. Highly recommended for recruitment services.',
+    rating: 5,
+  },
+  {
+    id: 'testimonial-2',
+    name: 'Abigail M.',
+    role: 'Job Seeker, Tema',
+    content:
+      'I submitted my CV through BENBAX and within two weeks I had an interview lined up. The team guided me through the process and I landed a great role. Grateful for their support.',
+    rating: 5,
+  },
+  {
+    id: 'testimonial-3',
+    name: 'Samuel A.',
+    role: 'Business Owner, Accra',
+    content:
+      'BENBAX built our company website and handled our recruitment needs. Professional team, timely delivery, and clear communication throughout. Will definitely work with them again.',
+    rating: 5,
+  },
+  {
+    id: 'testimonial-4',
+    name: 'Grace D.',
+    role: 'Restaurant Customer, Tema',
+    content:
+      'The restaurant service is excellent. Great food quality, friendly staff, and a clean environment. I regularly visit with my family and we always have a good experience.',
+    rating: 4,
+  },
+  {
+    id: 'testimonial-5',
+    name: 'Michael A.',
+    role: 'Operations Manager, Accra',
+    content:
+      'BENBAX handled our recruitment process outsourcing and the results were impressive. Time-to-hire reduced significantly and the quality of candidates was consistently high.',
+    rating: 5,
+  },
+  {
+    id: 'testimonial-6',
+    name: 'Sarah T.',
+    role: 'Job Seeker, Accra',
+    content:
+      'The team at BENBAX was professional and supportive throughout my job search. They helped me prepare for interviews and found a role that matched my skills perfectly.',
+    rating: 5,
+  },
+  {
+    id: 'testimonial-7',
+    name: 'James O.',
+    role: 'Small Business Owner, Tema',
+    content:
+      'We engaged BENBAX for both software development and marketing services. The website they built for us is excellent and their marketing support has helped us reach more customers.',
+    rating: 4,
+  },
+  {
+    id: 'testimonial-8',
+    name: 'Patience N.',
+    role: 'Restaurant Customer, Katamanso',
+    content:
+      'I love the food at BENBAX restaurant. The portions are generous, prices are fair, and the staff are always welcoming. My go-to place for lunch.',
+    rating: 5,
+  },
+] as const;
 export type Service = typeof SERVICES[number];
 export type ValueProposition = typeof VALUE_PROPOSITIONS[number];
 export type NavLink = typeof NAV_LINKS[number];

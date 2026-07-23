@@ -182,6 +182,20 @@ const Footer: React.FC = () => {
             <p className="text-sm text-slate-400 text-center md:text-left">
               &copy; {currentYear} {COMPANY_INFO.name}. All rights reserved.
             </p>
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+              <Link href="/faq" className="text-slate-400 hover:text-white transition-colors">
+                FAQ
+              </Link>
+              <Link href="/testimonials" className="text-slate-400 hover:text-white transition-colors">
+                Testimonials
+              </Link>
+              <Link href="/privacy" className="text-slate-400 hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-slate-400 hover:text-white transition-colors">
+                Terms of Service
+              </Link>
+            </div>
             <p className="text-sm text-slate-400 text-center md:text-right">
               Powered by Benbax software developers
             </p>

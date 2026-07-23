@@ -1,13 +1,90 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Download, Menu } from 'lucide-react';
+import { ChevronDown, Download, Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { GEOATTEND_INFO, NAV_LINKS } from '@/lib/constants';
 import Logo from '../common/Logo';
 import MobileMenu from './MobileMenu';
+
+const PRIMARY_NAV = NAV_LINKS.filter(link =>
+  ['/', '/about', '/services', '/careers', '/employers', '/faq', '/contact'].includes(link.href)
+);
+
+const MORE_LINKS = NAV_LINKS.filter(link =>
+  ['/why-choose-us', '/testimonials', '/restaurant'].includes(link.href)
+);
+
+const NavDropdown: React.FC = () => {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const isAnyActive = MORE_LINKS.some(link => pathname === link.href);
+
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen(!open)}
+        className={cn(
+          'group relative flex items-center gap-1 text-sm font-semibold tracking-wide transition-colors duration-300 hover:text-primary',
+          isAnyActive ? 'text-primary' : 'text-slate-700',
+        )}
+      >
+        More
+        <ChevronDown
+          className={cn(
+            'h-4 w-4 transition-transform duration-200',
+            open && 'rotate-180',
+          )}
+        />
+        <span
+          className={cn(
+            'absolute -bottom-2 left-0 h-0.5 rounded-full bg-primary transition-all duration-300',
+            isAnyActive ? 'w-full' : 'w-0 group-hover:w-full',
+          )}
+          aria-hidden="true"
+        />
+      </button>
+
+      {open && (
+        <div
+          className="absolute right-0 top-full mt-2 w-56 origin-top-right animate-fade-in rounded-xl border border-slate-200 bg-white py-2 shadow-xl"
+          role="menu"
+        >
+          {MORE_LINKS.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className={cn(
+                  'block px-5 py-2.5 text-sm font-medium transition-colors',
+                  isActive
+                    ? 'bg-primary/10 text-primary'
+                    : 'text-slate-700 hover:bg-slate-50 hover:text-primary',
+                )}
+                role="menuitem"
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+};
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,7 +128,7 @@ const Header: React.FC = () => {
           <Logo className="transition-transform duration-300 hover:scale-[1.01]" />
 
           <nav className="hidden items-center space-x-6 xl:flex">
-            {NAV_LINKS.map((link) => {
+            {PRIMARY_NAV.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
@@ -73,6 +150,7 @@ const Header: React.FC = () => {
                 </Link>
               );
             })}
+            <NavDropdown />
           </nav>
 
           <a
