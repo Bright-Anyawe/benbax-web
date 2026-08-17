@@ -22,7 +22,7 @@ export const COMPANY_INFO = {
   tagline: 'Software Development, Recruitment & HR, and Restaurant Services',
   description:
     'Delivering software development as our core focus, followed by recruitment and HR services, and quality restaurant services across Ghana.',
-  email: 'info@benbaxventures.com',
+  email: 'benbaxventures@gmail.com',
   phone: '+233 546 013 031',
   phoneAlt: '+233 598 204 414',
   restaurantPhone: '+233 533 525 034',
@@ -39,8 +39,24 @@ export const COMPANY_INFO = {
 } as const;
 
 export const GEOATTEND_INFO = {
-  name: 'Benbax GeoAttend',
-  apkUrl: 'https://expo.dev/accounts/a16-0s-organization/projects/geoattend/builds/af39ce83-61da-462d-859c-ad2128d0f89c',
+  name: 'GeoAttend',
+  apkUrl: 'https://expo.dev/accounts/benbax-expo/projects/geoattend/builds/78a37342-d687-4f01-b3d1-c19c240e2575',
+} as const;
+
+export const BENBAX_REQUEST_INFO = {
+  name: 'Benbax-request',
+  description:
+    'The customer-facing mobile app for the Benbax Go delivery and logistics platform. Customers use it to place delivery orders, track them live, pay, top up a wallet, and manage their account.',
+  apkUrl:
+    'https://expo.dev/accounts/benbax-expo/projects/benbax-request/builds/30ab37b5-39f9-4c2d-9c87-d30bf21fa770',
+} as const;
+
+export const BENBAX_DRIVER_INFO = {
+  name: 'Benbax-driver',
+  description:
+    'Unified Expo React Native partner app for ride drivers and delivery riders with onboarding, KYC, online/offline mode, ride offers, delivery offers, active job tracking, earnings, wallet, and safety foundations.',
+  apkUrl:
+    'https://expo.dev/accounts/benbax-expos-team/projects/benbax-driver/builds/32bc65e5-0b3b-4b4f-b3bc-477e9266e5a2',
 } as const;
 
 export const SERVICES = [

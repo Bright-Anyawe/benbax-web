@@ -1,24 +1,25 @@
 import Image from 'next/image';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import Section from '@/components/ui/Section';
+import Reveal from '@/components/ui/Reveal';
 import { COMPANY_INFO, COMPANY_REPRESENTATIVES } from '@/lib/constants';
 import { formatTel } from '@/lib/utils';
 
 const CompanyRepresentatives = () => {
   return (
     <Section>
-      <div className="mb-12 text-center">
+      <Reveal className="mb-12 text-center">
         <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-primary">Our Team</p>
         <h2 className="mb-3 text-3xl font-bold text-slate-900 md:text-4xl">Meet the Team</h2>
         <p className="mx-auto max-w-2xl text-lg text-slate-600">
           Dedicated professionals driving innovation and service excellence across every BENBAX division.
         </p>
-      </div>
+      </Reveal>
 
       {/* Team Members - Circular Images */}
       <div className="mx-auto mb-14 flex max-w-5xl flex-wrap items-start justify-center gap-x-12 gap-y-10">
-        {COMPANY_REPRESENTATIVES.map((member) => (
-          <div key={member.id} className="group flex w-64 flex-col items-center text-center">
+        {COMPANY_REPRESENTATIVES.map((member, index) => (
+          <Reveal key={member.id} variant="up" delay={index * 100} className="group flex w-64 flex-col items-center text-center">
             {/* Circular Image */}
             <div className="relative mb-4 h-28 w-28 overflow-hidden rounded-full ring-4 ring-primary/10 transition-all duration-500 group-hover:ring-primary/30 group-hover:shadow-lg group-hover:shadow-primary/20 md:h-32 md:w-32">
               <Image
@@ -36,12 +37,12 @@ const CompanyRepresentatives = () => {
               {member.title}
             </p>
             <p className="text-sm leading-relaxed text-slate-500">{member.description}</p>
-          </div>
+          </Reveal>
         ))}
       </div>
 
       {/* Address & Contact Bar */}
-      <div className="mx-auto max-w-3xl">
+      <Reveal delay={150} className="mx-auto max-w-3xl">
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white px-6 py-5 shadow-sm md:flex-nowrap md:px-8">
           {/* Location */}
           <div className="flex items-center gap-3">
@@ -92,7 +93,7 @@ const CompanyRepresentatives = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Reveal>
     </Section>
   );
 };

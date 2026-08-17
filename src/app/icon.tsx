@@ -10,7 +10,7 @@ export const size = {
 export const contentType = 'image/png';
 
 export default async function Icon() {
-  const logoPath = join(process.cwd(), 'public', 'images', 'benbax-company-ltd.png');
+  const logoPath = join(process.cwd(), 'public', 'images', 'Benbax_logo-removebg-preview.png');
   const logoBuffer = await readFile(logoPath);
   const logoDataUri = `data:image/png;base64,${logoBuffer.toString('base64')}`;
 

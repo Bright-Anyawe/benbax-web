@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import PageHeader from '@/components/common/PageHeader';
 import Section from '@/components/ui/Section';
 import Card from '@/components/ui/Card';
+import Reveal from '@/components/ui/Reveal';
 import { TESTIMONIALS } from '@/lib/constants';
 import { Star } from 'lucide-react';
 
@@ -40,19 +41,21 @@ export default function TestimonialsPage() {
 
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {TESTIMONIALS.map((testimonial) => (
-              <Card key={testimonial.id} className="h-full flex flex-col">
-                <div className="mb-3">
-                  <StarRating rating={testimonial.rating} />
-                </div>
-                <p className="mb-4 text-slate-700 italic leading-relaxed flex-1">
-                  &ldquo;{testimonial.content}&rdquo;
-                </p>
-                <div className="border-t border-slate-200 pt-3">
-                  <p className="font-semibold text-slate-900">{testimonial.name}</p>
-                  <p className="text-sm text-slate-500">{testimonial.role}</p>
-                </div>
-              </Card>
+            {TESTIMONIALS.map((testimonial, index) => (
+              <Reveal key={testimonial.id} delay={Math.min(index, 5) * 70} className="h-full">
+                <Card hover className="h-full flex flex-col">
+                  <div className="mb-3">
+                    <StarRating rating={testimonial.rating} />
+                  </div>
+                  <p className="mb-4 text-slate-700 italic leading-relaxed flex-1">
+                    &ldquo;{testimonial.content}&rdquo;
+                  </p>
+                  <div className="border-t border-slate-200 pt-3">
+                    <p className="font-semibold text-slate-900">{testimonial.name}</p>
+                    <p className="text-sm text-slate-500">{testimonial.role}</p>
+                  </div>
+                </Card>
+              </Reveal>
             ))}
           </div>
         </div>

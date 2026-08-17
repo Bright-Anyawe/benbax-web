@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Phone, MapPin, Clock4, UtensilsCrossed } from 'lucide-react';
 import Section from '@/components/ui/Section';
 import Card from '@/components/ui/Card';
+import Reveal from '@/components/ui/Reveal';
 import { COMPANY_INFO } from '@/lib/constants';
 import { formatTel } from '@/lib/utils';
 
@@ -107,18 +108,18 @@ export default function RestaurantPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
         <div className="relative mx-auto max-w-4xl px-4 text-center text-white sm:px-6">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-amber-500/20 px-4 py-2 text-sm font-semibold text-amber-200 backdrop-blur-sm">
+          <div className="mb-4 inline-flex animate-fade-up items-center gap-2 rounded-full bg-amber-500/20 px-4 py-2 text-sm font-semibold text-amber-200 backdrop-blur-sm">
             <UtensilsCrossed className="h-4 w-4" />
             Authentic Ghanaian Cuisine
           </div>
-          <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+          <h1 className="mb-6 animate-fade-up text-balance text-4xl font-bold leading-tight [animation-delay:100ms] md:text-5xl lg:text-6xl">
             Taste the Flavours of Ghana
           </h1>
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-slate-200 md:text-xl">
+          <p className="mx-auto mb-8 max-w-2xl animate-fade-up text-lg text-slate-200 [animation-delay:200ms] md:text-xl">
             From rich Jollof Rice to comforting Banku and Okro Soup — experience the best of traditional Ghanaian
             cooking at BENBAX Restaurant, made with fresh local ingredients and served with warmth.
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex animate-fade-up flex-col items-center justify-center gap-4 [animation-delay:300ms] sm:flex-row">
             <Link
               href="/contact"
               className="btn-base rounded-xl bg-amber-500 px-8 py-4 text-lg font-semibold text-slate-900 shadow-lg hover:bg-amber-400 focus:ring-amber-500"
@@ -137,34 +138,36 @@ export default function RestaurantPage() {
 
       {/* Menu Highlights */}
       <Section>
-        <div className="mb-12 text-center md:mb-16">
+        <Reveal className="mb-12 text-center md:mb-16">
           <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-amber-600">Our Menu</p>
           <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">Local Menu Highlights</h2>
           <p className="mx-auto max-w-2xl text-lg text-slate-600">
             Every dish is prepared fresh daily using authentic Ghanaian recipes and locally sourced ingredients.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {MENU_ITEMS.map((item) => (
-            <Card key={item.id} hover className="flex h-full flex-col overflow-hidden p-0">
-              <div className="relative h-52 w-full shrink-0">
-                <Image
-                  src={item.image}
-                  alt={`${item.name} — traditional Ghanaian dish`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover"
-                />
-                <span className="absolute right-3 top-3 rounded-full bg-amber-500 px-3 py-1 text-xs font-bold text-slate-900">
-                  {item.tag}
-                </span>
-              </div>
-              <div className="flex flex-1 flex-col p-6">
-                <h3 className="mb-2 text-xl font-bold text-slate-900">{item.name}</h3>
-                <p className="flex-grow text-slate-600">{item.description}</p>
-              </div>
-            </Card>
+          {MENU_ITEMS.map((item, index) => (
+            <Reveal key={item.id} delay={Math.min(index, 5) * 80} className="h-full">
+              <Card hover className="flex h-full flex-col overflow-hidden p-0">
+                <div className="group relative h-52 w-full shrink-0 overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={`${item.name} — traditional Ghanaian dish`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <span className="absolute right-3 top-3 rounded-full bg-amber-500 px-3 py-1 text-xs font-bold text-slate-900">
+                    {item.tag}
+                  </span>
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="mb-2 text-xl font-bold text-slate-900">{item.name}</h3>
+                  <p className="flex-grow text-slate-600">{item.description}</p>
+                </div>
+              </Card>
+            </Reveal>
           ))}
         </div>
       </Section>
@@ -172,7 +175,7 @@ export default function RestaurantPage() {
       {/* Why Dine With Us */}
       <Section background="gray">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
-          <div>
+          <Reveal variant="right">
             <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-amber-600">Why Dine With Us</p>
             <h2 className="mb-6 text-3xl font-bold text-slate-900 md:text-4xl">
               A True Ghanaian Dining Experience
@@ -206,8 +209,8 @@ export default function RestaurantPage() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="relative h-80 overflow-hidden rounded-2xl lg:h-[420px]">
+          </Reveal>
+          <Reveal delay={120} variant="scale" className="relative h-80 overflow-hidden rounded-2xl lg:h-[420px]">
             <Image
               src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80"
               alt="Beautifully presented Ghanaian cuisine with rich colours and textures"
@@ -215,14 +218,14 @@ export default function RestaurantPage() {
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
-          </div>
+          </Reveal>
         </div>
       </Section>
 
       {/* CTA Section */}
       <section className="relative overflow-hidden bg-primary-dark py-16 text-white md:py-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(244,180,0,0.15),transparent_60%)]" />
-        <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
+        <Reveal variant="scale" className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl">Ready to Experience Ghanaian Flavours?</h2>
           <p className="mb-8 text-lg text-slate-300">
             Visit us at {COMPANY_INFO.location} or call ahead to place your order. We also cater for events and
@@ -243,7 +246,7 @@ export default function RestaurantPage() {
               {COMPANY_INFO.restaurantPhone}
             </a>
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   );

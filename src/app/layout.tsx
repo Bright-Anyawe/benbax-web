@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 const siteUrl = 'https://benbaxlimitedcompany.com';
-const logoPath = '/images/benbax-company-ltd.png';
+const logoPath = '/images/Benbax_logo-removebg-preview.png';
 
 export const viewport: Viewport = {
   themeColor: '#2EBC3B',

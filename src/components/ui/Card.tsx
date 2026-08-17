@@ -7,7 +7,8 @@ const Card: React.FC<CardProps> = ({ children, className, hover = false }) => {
     <div
       className={cn(
         'card-base p-6',
-        hover && 'transition-all duration-300 hover:shadow-lg hover:-translate-y-1',
+        hover &&
+          'transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5',
         className
       )}
     >

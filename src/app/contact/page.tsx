@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { ArrowUpRight, Clock4, Inbox, Mail, MapPin, Phone } from 'lucide-react';
 import PageHeader from '@/components/common/PageHeader';
 import Section from '@/components/ui/Section';
+import Reveal from '@/components/ui/Reveal';
 import ContactForm from '@/components/sections/contact/ContactForm';
 import { COMPANY_INFO } from '@/lib/constants';
 import { formatMailto, formatTel } from '@/lib/utils';
@@ -40,7 +41,7 @@ export default function ContactPage() {
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
         <div className="space-y-6 lg:col-span-2">
-          <div className="animate-fade-up rounded-xl bg-primary-50 p-6">
+          <Reveal variant="right" className="rounded-xl bg-primary-50 p-6">
             <h2 className="mb-4 text-2xl font-semibold text-primary-dark">Contact Information</h2>
             <ul className="space-y-4 text-slate-700">
               <li className="flex items-start gap-3">
@@ -83,24 +84,24 @@ export default function ContactPage() {
                 </div>
               </li>
             </ul>
-          </div>
+          </Reveal>
 
-          <div className="animate-fade-up rounded-xl border border-slate-200 p-6 [animation-delay:100ms]">
+          <Reveal variant="right" delay={100} className="rounded-xl border border-slate-200 p-6 transition-shadow duration-300 hover:shadow-md">
             <h2 className="mb-2 text-xl font-semibold text-slate-900">Business Hours</h2>
             <p className="inline-flex items-center gap-2 text-slate-700">
               <Clock4 className="h-4 w-4 text-primary" />
               {COMPANY_INFO.businessHours}
             </p>
-          </div>
+          </Reveal>
         </div>
 
-        <div className="animate-fade-up lg:col-span-3 [animation-delay:140ms]">
+        <Reveal delay={140} className="lg:col-span-3">
           <ContactForm />
-        </div>
+        </Reveal>
       </div>
 
       <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="animate-fade-up rounded-2xl border border-slate-200 bg-white p-6 shadow-sm [animation-delay:180ms]">
+        <Reveal className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
           <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-primary">Visit Our Office</p>
           <h2 className="mb-3 text-2xl font-semibold text-slate-900">Real-time Location Map</h2>
           <p className="mb-4 text-slate-600">
@@ -115,9 +116,9 @@ export default function ContactPage() {
           >
             Open Directions
           </a>
-        </div>
+        </Reveal>
 
-        <div className="animate-fade-up overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm [animation-delay:220ms]">
+        <Reveal delay={100} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
           <iframe
             title="BENBAX office location on Google Maps"
             src={COMPANY_INFO.mapEmbedUrl}
@@ -125,7 +126,7 @@ export default function ContactPage() {
             referrerPolicy="no-referrer-when-downgrade"
             className="h-[320px] w-full border-0 md:h-[360px]"
           />
-        </div>
+        </Reveal>
       </div>
     </Section>
   );

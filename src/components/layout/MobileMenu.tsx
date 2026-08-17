@@ -1,11 +1,13 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Download, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { GEOATTEND_INFO, NAV_LINKS } from '@/lib/constants';
+import { NAV_LINKS } from '@/lib/constants';
+
+const CLOSE_ANIMATION_MS = 260;
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -14,18 +16,46 @@ interface MobileMenuProps {
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   const pathname = usePathname();
+  const [isMounted, setIsMounted] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
-  if (!isOpen) return null;
+  useEffect(() => {
+    if (isOpen) {
+      setIsMounted(true);
+      setIsClosing(false);
+      return;
+    }
+
+    if (!isMounted) return;
+
+    setIsClosing(true);
+    const timeout = setTimeout(() => {
+      setIsMounted(false);
+      setIsClosing(false);
+    }, CLOSE_ANIMATION_MS);
+
+    return () => clearTimeout(timeout);
+  }, [isOpen, isMounted]);
+
+  if (!isMounted) return null;
 
   return (
     <>
       <div
-        className="fixed inset-0 z-40 bg-slate-950/45 backdrop-blur-[2px] animate-fade-in xl:hidden"
+        className={cn(
+          'fixed inset-0 z-40 bg-slate-950/45 backdrop-blur-[2px] xl:hidden',
+          isClosing ? 'animate-fade-out' : 'animate-fade-in'
+        )}
         onClick={onClose}
         aria-hidden="true"
       />
 
-      <div className="fixed inset-y-0 right-0 z-50 w-full max-w-sm overflow-hidden bg-white shadow-2xl animate-slide-in-right xl:hidden">
+      <div
+        className={cn(
+          'fixed inset-y-0 right-0 z-50 w-full max-w-sm overflow-hidden bg-white shadow-2xl xl:hidden',
+          isClosing ? 'animate-slide-out-right' : 'animate-slide-in-right'
+        )}
+      >
         <div className="flex h-full flex-col">
           <div className="flex items-center justify-between border-b border-slate-200 bg-slate-50 p-6">
             <h2 className="text-xl font-bold text-primary">Menu</h2>
@@ -63,21 +93,19 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           </nav>
 
           <div className="border-t p-6">
-            <a
-              href={GEOATTEND_INFO.apkUrl}
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              href="/apps"
               onClick={onClose}
-              className="btn-base relative w-full animate-bounce rounded-xl bg-accent-orange px-8 py-4 text-lg text-slate-900 shadow-lg shadow-amber-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-amber-500 hover:text-slate-900 focus:ring-accent-orange [animation-duration:2.4s]"
+              className="btn-base relative w-full animate-attention rounded-xl bg-accent-orange px-8 py-4 text-lg text-slate-900 shadow-lg shadow-amber-500/20 hover:bg-amber-500 hover:text-slate-900 focus:ring-accent-orange"
             >
               <span className="absolute -top-2 -right-2 rounded-full bg-red-600 px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-white">
                 New
               </span>
               <span className="inline-flex items-center">
                 <Download className="mr-2 h-5 w-5" />
-                Download {GEOATTEND_INFO.name}
+                Check Out All Our New Apps
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

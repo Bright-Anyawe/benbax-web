@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Download, Mail, MapPin, Inbox, Phone } from 'lucide-react';
-import { COMPANY_INFO, GEOATTEND_INFO, NAV_LINKS, SOCIAL_LINKS } from '@/lib/constants';
+import { COMPANY_INFO, GEOATTEND_INFO, BENBAX_REQUEST_INFO, BENBAX_DRIVER_INFO, NAV_LINKS, SOCIAL_LINKS } from '@/lib/constants';
 import Logo from '../common/Logo';
 import { formatMailto, formatTel } from '@/lib/utils';
 
@@ -89,7 +89,31 @@ const Footer: React.FC = () => {
               className="mt-5 inline-flex items-center rounded-lg bg-accent-orange px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-amber-500"
             >
               <Download className="mr-2 h-4 w-4" />
-              Download {GEOATTEND_INFO.name}
+               Download {GEOATTEND_INFO.name}
+            </a>
+          </div>
+          <div>
+            <h3 className="text-white font-semibold text-lg mb-4">Benbax Go</h3>
+            <a
+              href={BENBAX_REQUEST_INFO.apkUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-5 inline-flex items-center rounded-lg bg-accent-orange px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-amber-500"
+            >
+              <Download className="mr-2 h-4 w-4" />
+              Download {BENBAX_REQUEST_INFO.name}
+            </a>
+          </div>
+          <div>
+            <h3 className="text-white font-semibold text-lg mb-4">Benbax Driver</h3>
+            <a
+              href={BENBAX_DRIVER_INFO.apkUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-5 inline-flex items-center rounded-lg bg-accent-orange px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-amber-500"
+            >
+              <Download className="mr-2 h-4 w-4" />
+              Download {BENBAX_DRIVER_INFO.name}
             </a>
           </div>
 

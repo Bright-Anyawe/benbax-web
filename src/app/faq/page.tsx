@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageHeader from '@/components/common/PageHeader';
 import Section from '@/components/ui/Section';
+import Reveal from '@/components/ui/Reveal';
 import { FAQ_ITEMS } from '@/lib/constants';
 
 const faqSchema = {
@@ -53,21 +54,25 @@ export default function FaqPage() {
         />
 
         <div className="mx-auto max-w-4xl space-y-12">
-          {categories.map((category) => (
-            <div key={category.title}>
+          {categories.map((category, categoryIndex) => (
+            <Reveal key={category.title} delay={categoryIndex * 60}>
               <h2 className="mb-6 text-2xl font-bold text-primary-dark">{category.title}</h2>
               <div className="space-y-4">
                 {category.items.map((item) => (
-                  <details key={item.id} className="group rounded-xl border border-slate-200 bg-white p-5 shadow-sm" name="faq-page">
+                  <details
+                    key={item.id}
+                    className="group rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:border-primary/30 hover:shadow-md"
+                    name="faq-page"
+                  >
                     <summary className="cursor-pointer list-none pr-6 text-lg font-semibold text-slate-900">
                       {item.question}
-                      <span className="float-right text-primary transition-transform group-open:rotate-45">+</span>
+                      <span className="float-right text-primary transition-transform duration-300 group-open:rotate-45">+</span>
                     </summary>
                     <p className="pt-4 text-slate-700">{item.answer}</p>
                   </details>
                 ))}
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </Section>
