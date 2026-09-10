@@ -48,16 +48,14 @@ export const BENBAX_REQUEST_INFO = {
   name: 'Benbax-request',
   description:
     'The customer-facing mobile app for the Benbax Go delivery and logistics platform. Customers use it to place delivery orders, track them live, pay, top up a wallet, and manage their account.',
-  apkUrl:
-    'https://expo.dev/accounts/benbax-expo/projects/benbax-request/builds/30ab37b5-39f9-4c2d-9c87-d30bf21fa770',
+  apkUrl: 'https://drive.google.com/file/d/1Ymc30TjYp9SMdgQBrNeLp2fR1vZ6Eab7/view?usp=sharing',
 } as const;
 
 export const BENBAX_DRIVER_INFO = {
   name: 'Benbax-driver',
   description:
     'Unified Expo React Native partner app for ride drivers and delivery riders with onboarding, KYC, online/offline mode, ride offers, delivery offers, active job tracking, earnings, wallet, and safety foundations.',
-  apkUrl:
-    'https://expo.dev/accounts/benbax-expos-team/projects/benbax-driver/builds/32bc65e5-0b3b-4b4f-b3bc-477e9266e5a2',
+  apkUrl: 'https://drive.google.com/file/d/14eAB2AfOcsGCE9eNB6SwZFJEo493Jdtm/view?usp=sharing',
 } as const;
 
 export const SERVICES = [
