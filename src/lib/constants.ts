@@ -41,6 +41,7 @@ export const COMPANY_INFO = {
 export const GEOATTEND_INFO = {
   name: 'GeoAttend',
   apkUrl: 'https://expo.dev/accounts/benbax-expo/projects/geoattend/builds/78a37342-d687-4f01-b3d1-c19c240e2575',
+  adminUrl: 'https://benbax-geoattend.vercel.app/login',
 } as const;
 
 export const BENBAX_REQUEST_INFO = {
