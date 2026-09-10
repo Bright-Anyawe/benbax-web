@@ -58,6 +58,11 @@ export const BENBAX_DRIVER_INFO = {
   apkUrl: 'https://drive.google.com/file/d/14eAB2AfOcsGCE9eNB6SwZFJEo493Jdtm/view?usp=sharing',
 } as const;
 
+export const BENBAX_GO_ADMIN_INFO = {
+  name: 'Benbax Go Admin',
+  url: 'https://benbax-go-admin-ccay.vercel.app/',
+} as const;
+
 export const SERVICES = [
   {
     id: 'software-development',

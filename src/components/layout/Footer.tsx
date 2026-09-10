@@ -1,7 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
-import { Download, Mail, MapPin, Inbox, Phone } from 'lucide-react';
-import { COMPANY_INFO, GEOATTEND_INFO, BENBAX_REQUEST_INFO, BENBAX_DRIVER_INFO, NAV_LINKS, SOCIAL_LINKS } from '@/lib/constants';
+import { ArrowUpRight, Download, Mail, MapPin, Inbox, Phone } from 'lucide-react';
+import {
+  COMPANY_INFO,
+  GEOATTEND_INFO,
+  BENBAX_REQUEST_INFO,
+  BENBAX_DRIVER_INFO,
+  BENBAX_GO_ADMIN_INFO,
+  NAV_LINKS,
+  SOCIAL_LINKS,
+} from '@/lib/constants';
 import Logo from '../common/Logo';
 import { formatMailto, formatTel } from '@/lib/utils';
 
@@ -102,6 +110,15 @@ const Footer: React.FC = () => {
             >
               <Download className="mr-2 h-4 w-4" />
               Download {BENBAX_REQUEST_INFO.name}
+            </a>
+            <a
+              href={BENBAX_GO_ADMIN_INFO.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center rounded-lg border border-primary-300 px-4 py-2 text-sm font-semibold text-primary-100 transition hover:border-white hover:text-white"
+            >
+              <ArrowUpRight className="mr-2 h-4 w-4" />
+              Open Admin Web App
             </a>
           </div>
           <div>

@@ -1,19 +1,25 @@
 import type { Metadata } from 'next';
-import { ArrowUpRight, Download, MapPin, Smartphone } from 'lucide-react';
+import { ArrowUpRight, Download, Laptop, MapPin, Smartphone } from 'lucide-react';
 import PageHeader from '@/components/common/PageHeader';
 import Section from '@/components/ui/Section';
 import Reveal from '@/components/ui/Reveal';
 import BenbaxGoGuide from '@/components/sections/apps/BenbaxGoGuide';
-import { GEOATTEND_INFO, BENBAX_REQUEST_INFO, BENBAX_DRIVER_INFO } from '@/lib/constants';
+import {
+  GEOATTEND_INFO,
+  BENBAX_REQUEST_INFO,
+  BENBAX_DRIVER_INFO,
+  BENBAX_GO_ADMIN_INFO,
+} from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Our Apps',
   description:
-    'Download BENBAX mobile apps, access the GeoAttend admin portal, and read the Benbax Go user and presentation guide.',
+    'Download BENBAX mobile apps, access the GeoAttend and Benbax Go admin portals, and read the Benbax Go user and presentation guide.',
   keywords: [
     'BENBAX apps',
     'GeoAttend download',
     'GeoAttend admin login',
+    'Benbax Go admin login',
     'Benbax Go user guide',
     'Benbax-request',
     'Benbax-driver',
@@ -58,7 +64,7 @@ export default function AppsPage() {
       <Section background="gray">
         <PageHeader
           title="Check Out All Our New Apps"
-          description="Download and test the latest BENBAX mobile apps for Android, access GeoAttend admin, and read the Benbax Go guide."
+          description="Download and test the latest BENBAX mobile apps for Android, access both admin portals, and read the Benbax Go guide."
         />
 
         <div className="space-y-8">
@@ -122,6 +128,39 @@ export default function AppsPage() {
             </Reveal>
           ))}
         </div>
+      </Section>
+      <Section background="white">
+        <Reveal variant="scale">
+          <div className="overflow-hidden rounded-2xl border border-primary/30 bg-gradient-to-br from-slate-900 via-primary-dark to-primary p-8 text-white shadow-lg md:p-10">
+            <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+              <div>
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-xs font-bold uppercase tracking-wide text-primary-100">
+                  <Laptop className="h-4 w-4" />
+                  Benbax Go operations
+                </div>
+                <h2 className="mb-3 text-3xl font-extrabold md:text-4xl">Benbax Go Admin Web App</h2>
+                <p className="max-w-3xl text-base leading-7 text-primary-50 md:text-lg">
+                  Platform administrators use the browser-based dashboard to manage accounts, monitor requests and jobs,
+                  review partners, and support daily Benbax Go operations. No mobile APK installation is required.
+                </p>
+              </div>
+              <div className="flex flex-col items-stretch justify-center">
+                <a
+                  href={BENBAX_GO_ADMIN_INFO.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-base inline-flex items-center justify-center rounded-xl bg-accent-orange px-6 py-4 text-lg font-extrabold text-slate-900 shadow-lg shadow-amber-950/20 hover:bg-amber-500 focus:ring-accent-orange"
+                >
+                  Open {BENBAX_GO_ADMIN_INFO.name}
+                  <ArrowUpRight className="ml-2 h-5 w-5" />
+                </a>
+                <p className="mt-3 text-center text-sm font-medium text-primary-100">
+                  Opens the secure admin dashboard in a new tab
+                </p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </Section>
       <BenbaxGoGuide />
     </>
