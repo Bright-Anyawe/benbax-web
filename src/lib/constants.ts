@@ -22,7 +22,7 @@ export const COMPANY_INFO = {
   tagline: 'Software Development, Recruitment & HR, and Restaurant Services',
   description:
     'Delivering software development as our core focus, followed by recruitment and HR services, and quality restaurant services across Ghana.',
-  email: 'benbaxventures@gmail.com',
+  email: 'info@benbaxco.com',
   phone: '+233 546 013 031',
   phoneAlt: '+233 598 204 414',
   restaurantPhone: '+233 533 525 034',
