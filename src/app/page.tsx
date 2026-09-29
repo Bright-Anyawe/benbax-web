@@ -66,7 +66,18 @@ export default function HomePage() {
                 <Download className="mr-2 h-5 w-5" />
                 Download {GEOATTEND_INFO.name} APK
               </a>
-              <p className="mt-3 text-center text-sm font-medium text-slate-600">Tap to test the latest Android build</p>
+              <a
+                href={GEOATTEND_INFO.adminUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-base mt-3 inline-flex items-center justify-center rounded-xl border-2 border-primary px-6 py-3 text-base font-bold text-primary hover:bg-primary hover:text-white focus:ring-primary"
+              >
+                <ArrowUpRight className="mr-2 h-5 w-5" />
+                Open {GEOATTEND_INFO.name} Admin Login
+              </a>
+              <p className="mt-3 text-center text-sm font-medium text-slate-600">
+                Download the Android build or sign in to the web admin portal
+              </p>
             </div>
           </div>
         </Reveal>

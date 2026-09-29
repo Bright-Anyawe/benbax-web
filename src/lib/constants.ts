@@ -41,7 +41,7 @@ export const COMPANY_INFO = {
 export const GEOATTEND_INFO = {
   name: 'GeoAttend',
   apkUrl: 'https://drive.google.com/file/d/1SkRZOJPAyJKi_t4G0ALqCoJwAPydJF8i/view?usp=sharing',
-  adminUrl: 'https://benbax-geoattend.vercel.app/login',
+  adminUrl: 'https://geofence-pi.vercel.app/login',
 } as const;
 
 export const BENBAX_REQUEST_INFO = {

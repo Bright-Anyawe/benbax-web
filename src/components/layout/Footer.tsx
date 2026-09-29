@@ -99,6 +99,15 @@ const Footer: React.FC = () => {
               <Download className="mr-2 h-4 w-4" />
                Download {GEOATTEND_INFO.name}
             </a>
+            <a
+              href={GEOATTEND_INFO.adminUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center rounded-lg border border-primary-300 px-4 py-2 text-sm font-semibold text-primary-100 transition hover:border-white hover:text-white"
+            >
+              <ArrowUpRight className="mr-2 h-4 w-4" />
+              {GEOATTEND_INFO.name} Admin Login
+            </a>
           </div>
           <div>
             <h3 className="text-white font-semibold text-lg mb-4">Benbax Go</h3>
