@@ -20,6 +20,10 @@
 .DS_Store
 *.pem
 
+# app builds are hosted externally (e.g. Google Drive), never committed
+*.apk
+*.aab
+
 # debug
 npm-debug.log*
 yarn-debug.log*
