@@ -40,7 +40,7 @@ export const COMPANY_INFO = {
 
 export const GEOATTEND_INFO = {
   name: 'GeoAttend',
-  apkUrl: 'https://drive.google.com/file/d/1SkRZOJPAyJKi_t4G0ALqCoJwAPydJF8i/view?usp=sharing',
+  apkUrl: 'https://drive.google.com/file/d/1umUBz-LfDimoND_TwhRLXD-dU7xRq1p7/view?usp=sharing',
   adminUrl: 'https://geofence-pi.vercel.app/login',
 } as const;
 
